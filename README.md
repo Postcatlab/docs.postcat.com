@@ -7,12 +7,12 @@
 ```bash
 .
 ├── README.md						# 本文档
+├── index.md						# 首页
 ├── components/					# markdown 文档中需要运行的vue组件，例如定制化的首页
-├── deploy.sh						# 自动化脚本
-├── docs
-│   ├── xxx.md					# 具体文档
-│   ├── assets/					# 静态资源，主要是方式图片
-│   └── .vitepress/			# vitepress配置，构建后的静态资源也在该文件夹下。
+├── .vitepress/					# vitepress配置，构建后的静态资源也在该文件夹下。
+├── assets/						  # 静态资源，主要是放置图片
+├── public/						  # 不需要编译的公共资源，如 favicon.ico
+├── docs/               # 各详细文档
 ├── package.json				# 依赖配置
 └── yarn.lock						# 依赖配置
 ```
@@ -24,7 +24,7 @@
 运行 VitePress 环境
 
 ```bash
-$ yarn docs:dev
+$ yarn dev
 ```
 
 运行成功后，可以在`localhost:3000/`实时查看编辑结果。
@@ -39,7 +39,7 @@ VitePress 提供了一些配置选项，用于控制`.md`文档的细节，目�
 
 #### 文档中的静态资源
 
-在`.md`文件中的图片，目前约定放置在`/docs/assets/`文件夹下，在`.md`文件中使用相对路径引入即可。
+在`.md`文件中的图片，目前约定放置在`/assets/`文件夹下，在`.md`文件中使用相对路径引入即可。
 
 #### 如何在 markdown 嵌入 vue 组件
 
@@ -59,16 +59,16 @@ import Home from '../components/Home.vue'
 ...markdown 语法内容...
 ```
 
-具体可以参照官方文档的[Using Vue in Markdown](https://vitepress.vuejs.org/guide/using-vue.html#using-components)。具体例子可参照`/docs/index.md`文件。
+具体可以参照官方文档的[Using Vue in Markdown](https://vitepress.vuejs.org/guide/using-vue.html#using-components)。具体例子可参照`/index.md`文件。
 
 ### 如何构建
 
 构建命令为：
 
 ```bash
-$ yarn docs:build
+$ yarn build
 ```
 
-构建成功后，会在`/.vitepress`下创建名为 `dist/`的文件夹，其中内容即是构建后的静态资源，如果需要在本地预览，可以运行`yarn docs:serve`命令，在本地临时启动一个静态资源服务器，即可预览构建后的最终效果。
+构建成功后，会在`/.vitepress`下创建名为 `dist/`的文件夹，其中内容即是构建后的静态资源，如果需要在本地预览，可以运行`yarn serve`命令，在本地临时启动一个静态资源服务器，即可预览构建后的最终效果。
 
 也可以将`dist/`中的内容放置到正式服务器上浏览。
