@@ -1,6 +1,7 @@
 module.exports = {
   title: 'EoApi',
   description: 'Just playing around.',
+  head: [['link', { rel: 'shortcut icon', href: '../assets/favicon.ico' }]],
   themeConfig: {
     //   头部导航
     nav: [
