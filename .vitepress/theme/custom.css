@@ -5,3 +5,6 @@
   --c-brand: #158565;
   --c-brand-light: #158565;
 }
+.nav-bar-title .logo{
+  height: 2rem;
+}

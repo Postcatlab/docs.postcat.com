@@ -8,8 +8,23 @@ module.exports = {
     nav: [
       { text: "首页", link: "/index" },
       { text: "文档", link: "/docs/about" },
-      { text: "Demo", link: "https://demo.eoapi.io/" }
-    ]
+      {
+        text: "下载",
+        ariaLabel: "Download",
+        items: [
+          {
+            text: "MacOS",
+            link: "https://github.com/eolinker/eoapi/releases/latest/download/eoapi-setup.dmg",
+          },
+          {
+            text: "Windows",
+            link: "https://github.com/eolinker/eoapi/releases/latest/download/eoapi-setup.exe",
+          },
+        ],
+      },
+      { text: "示例", link: "https://demo.eoapi.io/" },
+      { text: "Github", link: "https://github.com/eolinker/eoapi" },
+    ],
   },
-  srcExclude: ["README.md"]
+  srcExclude: ["README.md"],
 };
