@@ -33,7 +33,7 @@
 
 # 快速开始
 
-- 访问 [在线示例](https://demo.eoapi.io/) 快速体验产品特性
+- 访问 [Live Demo](https://demo.eoapi.io/) 快速体验产品特性
 
 - 查看 [官方文档](https://www.eoapi.io/docs/about.html) 了解更多功能
 
@@ -82,6 +82,6 @@ npm install -g @angular/cli
 | `npm run test` | 执行单元测试  |
 | `npm run e2e`  | 执行 E2E 测试 |
 
-## Contact us
+## 联系我们
 
-If you'd like to contact us, please create a [Github issue](https://github.com/eolinker/eoapi/issues). Thank you!
+如果你想联系我们,可以到 [Github issue](https://github.com/eolinker/eoapi/issues) 创建一个 Issue，我们会及时响应，感谢你的支持!

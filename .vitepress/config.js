@@ -22,7 +22,7 @@ module.exports = {
           },
         ],
       },
-      { text: "示例", link: "https://demo.eoapi.io/" },
+      { text: "Live Demo", link: "https://demo.eoapi.io/" },
       { text: "Github", link: "https://github.com/eolinker/eoapi" },
     ],
   },
