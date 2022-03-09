@@ -1,5 +1,3 @@
-## 快速开始
-
 <p align="center">
   <a href="https://github.com/eolinker/eoapi">
     <img width="200" src="https://raw.githubusercontent.com/eolinker/eoapi/main/src/assets/icons/128x128.png">
@@ -31,11 +29,7 @@
 
 🌱 插件集市
 
-# 快速开始
-
-- 访问 [Live Demo](https://demo.eoapi.io/) 快速体验产品特性
-
-- 查看 [官方文档](https://www.eoapi.io/docs/about.html) 了解更多功能
+- 你可以访问 [Live Demo](https://demo.eoapi.io/) 快速体验产品特性
 
 - 访问 [Releases](https://github.com/eolinker/eoapi/releases) 下载 Windows、macOS 安装包。
 
