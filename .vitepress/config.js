@@ -1,10 +1,10 @@
 module.exports = {
   title: " ",
-  description: "Just playing around.",
+  description: "一个轻量的开源 API 工具",
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
     //   头部导航
-    logo: "https://demo.eoapi.io/assets/images/logo.svg",
+    logo: "/assets/logo.svg",
     nav: [
       { text: "首页", link: "/index" },
       { text: "文档", link: "/docs/about" },
@@ -47,3 +47,4 @@ module.exports = {
   },
   srcExclude: ["README.md"],
 };
+
