@@ -4,7 +4,7 @@ module.exports = {
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
     //   头部导航
-    logo: "/assets/logo.svg",
+    logo: "/images/logo.svg",
     nav: [
       { text: "首页", link: "/index" },
       { text: "文档", link: "/docs/about" },
@@ -30,21 +30,16 @@ module.exports = {
       "/docs/": [
         {
           text: "介绍",
-          children: [
-            { text: "快速开始", link: "/docs/about" },
-          ],
+          children: [{ text: "快速开始", link: "/docs/about" }],
         },
       ],
       "/api/": [
         {
           text: "API",
-          children: [
-            { text: "模块开发指南", link: "/api/module" },
-          ],
+          children: [{ text: "模块开发指南", link: "/api/module" }],
         },
       ],
     },
   },
   srcExclude: ["README.md"],
 };
-

@@ -2,25 +2,12 @@
   <h1 class="title">Eoapi</h1>
   <p class="desc">一个轻量的开源 API 工具</p>
   <div class="download-links-list f_row f_jc_ac">
-    <div
-      onclick="downloadPackage('winX64_exe')"
-      class="download-links-card-item"
-    >
-      <div class="item-icon-show">
-        <i class="iconfont">&#xec89;</i>
-        <i class="iconfont icon-download">&#xe83a;</i>
-      </div>
-      <span class="item-text-show">Windows 客户端</span>
-    </div>
-    <div
-      onclick="downloadPackage('macOs_exe')"
-      class="download-links-card-item"
-    >
-      <div class="item-icon-show">
-        <i class="iconfont icon-mac">&#xe6bf;</i>
-        <i class="iconfont icon-download">&#xe83a;</i>
-      </div>
-      <span class="item-text-show">macOS 客户端</span>
+    <div v-for="item in resourceInfo" class="download-links-card-item">
+      <a :href="item.link" class="item-icon-show">
+        <i class="iconfont" :class="`icon-${item.icon}`"></i>
+        <i class="iconfont icon-download"></i>
+      </a>
+      <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
   <img
@@ -31,6 +18,43 @@
 <script>
 export default {
   name: "home",
+  data() {
+    return {
+      resourceInfo: [
+        {
+          id: "win",
+          name: "Windows 客户端",
+          icon: "windows",
+          keyword: "Setup",
+          suffix: "exe",
+          link: "",
+        },
+        {
+          id: "mac",
+          name: "macOS 客户端",
+          icon: "mac",
+          suffix: "dmg",
+          link: "",
+        },
+      ],
+    };
+  },
+  methods: {
+    getDownloadResource() {
+      fetch("https://api.github.com/repos/eolinker/eoapi/releases")
+        .then((response) => response.json())
+        .then((data) => {
+          this.resourceInfo.forEach(item=>{
+            let assetItem=data[0].assets.find(asset=>asset.browser_download_url.slice(-(item.suffix.length))===item.suffix&&(!item.keyword||asset.browser_download_url.includes(item.keyword)));
+            item.link=assetItem.browser_download_url;
+          })
+          console.log(this.resourceInfo)
+        });
+    },
+  },
+  mounted() {
+    this.getDownloadResource();
+  },
 };
 </script>
 <style lang="stylus" scoped>
