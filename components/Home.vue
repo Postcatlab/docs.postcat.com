@@ -11,7 +11,7 @@
     </div>
   </div>
   <img
-    src="https://raw.githubusercontent.com/eolinker/eoapi/main/wiki/preview_1.png?token=GHSAT0AAAAAABRGKRUBJ634JVP7XL7KWAECYP3J36Q"
+    src="../public/images/preview_1.png?token=GHSAT0AAAAAABRGKRUBJ634JVP7XL7KWAECYP3J36Q"
   />
 </template>
 

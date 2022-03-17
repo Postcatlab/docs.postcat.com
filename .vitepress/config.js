@@ -15,11 +15,13 @@ module.exports = {
         items: [
           {
             text: "MacOS",
-            link: "https://github.com/eolinker/eoapi/releases/latest/download/eoapi-setup.dmg",
+            link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
+            target:"_self"
           },
           {
             text: "Windows",
-            link: "https://github.com/eolinker/eoapi/releases/latest/download/eoapi-setup.exe",
+            link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
+            target:"_self"
           },
         ],
       },
