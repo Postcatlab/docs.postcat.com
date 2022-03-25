@@ -16,12 +16,12 @@ module.exports = {
           {
             text: "MacOS",
             link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
-            target:"_self"
+            target: "_self",
           },
           {
             text: "Windows",
             link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
-            target:"_self"
+            target: "_self",
           },
         ],
       },
@@ -31,9 +31,17 @@ module.exports = {
     sidebar: {
       "/docs/": [
         {
-          text: "介绍",
-          children: [{ text: "快速开始", link: "/docs/about" }],
+          text: "产品手册",
+          children: [{ text: "产品简介", link: "/docs/about" }],
         },
+        {
+          text: "API 研发管理",
+          children: [
+            { text: "API 管理", link: "/docs/apimanage" },
+            { text: "API 测试", link: "/docs/apimanage" },
+            { text: "测试环境管理", link: "/docs/env" },
+          ],
+        }
       ],
       "/api/": [
         {
