@@ -38,3 +38,7 @@
 .nav-bar-title .logo {
   height: 2rem;
 }
+
+.theme > .nav-bar > .nav > .nav-links > .item:last-child {
+  display: none;
+}
