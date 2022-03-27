@@ -1,6 +1,6 @@
 ---
 home: true
-title: Eoapi
+title: 一个轻量的开源 API 工具
 ---
 <script setup>
 import Home from './components/Home.vue'

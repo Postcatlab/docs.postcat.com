@@ -42,3 +42,6 @@
 .theme > .nav-bar > .nav > .nav-links > .item:last-child {
   display: none;
 }
+.nav-bar-title {
+  font-size: 0 !important;
+}
