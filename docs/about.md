@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/eolinker/eoapi">
-    <img width="200" src="https://raw.githubusercontent.com/eolinker/eoapi/main/src/assets/icons/128x128.png">
+    <img width="200" src="../public/images/logo.png">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 一个轻量的开源 API 工具
 </div>
 
-![](https://raw.githubusercontent.com/eolinker/eoapi/main/wiki/preview_1.png?token=GHSAT0AAAAAABRGKRUBJ634JVP7XL7KWAECYP3J36Q)
+![](../public/images/preview_1.png?token=GHSAT0AAAAAABRGKRUBJ634JVP7XL7KWAECYP3J36Q)
 
 - 你可以访问 [Live Demo](https://demo.eoapi.io/) 快速体验产品特性
 
