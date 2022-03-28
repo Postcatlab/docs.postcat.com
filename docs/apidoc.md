@@ -2,7 +2,7 @@
 
 点击新建 API 按钮，新增一个 API 接口，我们在开始一个新接口之前，需要进行以下判断：
 - 请求协议是不是 HTTP/HTTPS？
-- API 是否属于 RESTFUL 风格的接口？
+- API 是不是 RESTful 风格？
 - 请求体和响应体格式是什么(XML、JSON、FormData、Raw、Binary)？
 
 ## 预览接口
