@@ -10,6 +10,6 @@
 <!-- 或者 Segment Fault  -->
 1. [GitHub Discussions](https://github.com/eolinker/eoapi/discussions)
 
-2. <a href="http://stackoverflow.com/questions/tagged/eoapi"><img style="vertical-align: middle;" alt="Stack Overflow" src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg?v=2bb144720a66" width="140"></a>(英文)
+2. <a href="http://stackoverflow.com/questions/tagged/eoapi"><img style="vertical-align: middle;" alt="Stack Overflow" src="../public/images/stackoverflow.svg" width="140"></a>(英文)
 
 3. <a href="https://segmentfault.com/"><img style="vertical-align: middle;" src="../public/images/segmentfault.svg" width="140" height="26" class="lg-show" alt="segmentfault"></a>(中文)
