@@ -17,5 +17,18 @@ API 的全称是 Application Programming Interface，直译过来是**应用程�
 
 ![](../assets/images/2022-03-29-18-18-51.png)
 
-通过 API 我们就连接了 Web 客户端和服务器两个程序，API 数据是 Eoapi 的核心，在 Eoapi 上你可以托管遵循网络协议的 API，例如 HTTP、Websocket、TCP 等等。
-> Websocket、TCP 暂未上线，敬请期待
+通过 API 我们就连接了 Web 客户端和服务器两个程序。
+**有时候 API 不只是指程序接口，还代指了它所提供的功能**，例如人脸识别 API、天气预报 API 等。
+
+API 数据是 Eoapi 的核心，在 Eoapi 上你可以托管遵循网络协议的 API，例如 HTTP、Websocket、TCP 等等。
+
+:::warning
+Websocket、TCP 协议功能暂未上线，敬请期待
+:::
+
+## HTTP 协议的基本要素
+超文本传输协议（Hyper Text Transfer Protocol，HTTP）是一个简单的请求-响应协议，我们可以通过 HTTP 协议传递数据，下面来看看一个 HTTP 
+### 请求地址
+### 请求方式
+### 请求头部
+### 请求体
