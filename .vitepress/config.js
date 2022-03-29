@@ -41,7 +41,6 @@ module.exports = {
           text: "产品手册",
           children: [
             { text: "产品简介", link: "/docs/about"},
-            { text: "概念", link: "/docs/concepts"},
             {
               text: "API 管理",
               link: "/docs/apimanage",
@@ -54,7 +53,8 @@ module.exports = {
             {
               text: "插件广场",
               link: "/docs/extensions",
-            }
+            },
+            { text: "概念", link: "/docs/concepts"},
           ],
         },
         {
