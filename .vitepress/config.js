@@ -50,6 +50,7 @@ module.exports = {
                 { text: "测试环境", link: "/docs/env" },
               ],
             },
+            { text: "概念", link: "/docs/concepts"},
           ],
         },
         {
