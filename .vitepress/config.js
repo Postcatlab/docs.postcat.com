@@ -6,6 +6,7 @@ module.exports = {
   lastUpdated: true,
   themeConfig: {
     docsRepo:'eolinker/eoapi-docs',
+    docsBranch:'main',
     repo: 'eolinker/eoapi',
     logo: "/images/logo.svg",
     editLinks:true,
