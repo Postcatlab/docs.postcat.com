@@ -1,7 +1,7 @@
 # 接口测试
 接口开发完成后，我们需要调用接口来测试接口的表现，当表现符合预期时，则代表接口可用。
 
-在测试中我们可能会关注**状态码、返回值以及响应时间**，这些数据 Eoapi 通通都会展示给你，判断 API 是否正常。
+在测试中我们可能会关注**状态码、响应体以及响应时间**，这些数据 Eoapi 通通都会展示给你，判断 API 是否正常。
 
 ![](../assets/images/2022-03-30-11-51-08.png)
 
@@ -15,9 +15,10 @@
 
 我们常在浏览器看到的的 HTTP 格式对应在 EOAPI 的填写位置如图：
 
-API Path/请求方式/请求头/Query 参数，请求地址里面可能包括了 Query 参数，URL 上填写的 Query 会同步更新在 Query 参数的表格里面。
+API Path 里面可能填写了 Query 参数，EOAPI 会将它自动同步到 Query 参数的表格里面。
 
 ![](../assets/images/http-headers-reflect.png)
+<p align=center>请求 URL/请求方式/请求头/Query 参数</p>
 
 
 
