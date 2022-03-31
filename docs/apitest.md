@@ -19,9 +19,8 @@
 <p align=center>请求 URL/请求方式/请求头/Query 参数</p>
 
 API Path 里面可能填写了 Query 参数，EOAPI 会将它自动同步到 Query 参数的表格里面。
-
+首先确认你的 [HTTP 请求体格式](./concepts.html#json)
 请求体部分的对照如下：
-
 
 
 <!-- ![](../assets/images/2022-03-30-11-28-40.png) -->

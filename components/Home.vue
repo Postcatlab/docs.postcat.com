@@ -44,11 +44,17 @@ export default {
       fetch("https://api.github.com/repos/eolinker/eoapi/releases")
         .then((response) => response.json())
         .then((data) => {
-          this.resourceInfo.forEach(item=>{
-            let assetItem=data[0].assets.find(asset=>asset.browser_download_url.slice(-(item.suffix.length))===item.suffix&&(!item.keyword||asset.browser_download_url.includes(item.keyword)));
-            item.link=assetItem.browser_download_url;
-          })
-          console.log(this.resourceInfo)
+          this.resourceInfo.forEach((item) => {
+            let assetItem = data[0].assets.find(
+              (asset) =>
+                asset.browser_download_url.slice(-item.suffix.length) ===
+                  item.suffix &&
+                (!item.keyword ||
+                  asset.browser_download_url.includes(item.keyword))
+            );
+            item.link = assetItem.browser_download_url;
+          });
+          console.log(this.resourceInfo);
         });
     },
   },
