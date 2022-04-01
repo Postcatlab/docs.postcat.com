@@ -1,21 +1,24 @@
 module.exports = {
-  lang: 'zh-Hans',
+  lang: "zh-Hans",
   title: "EOAPI",
   description: "一个轻量的开源 API 工具",
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   lastUpdated: true,
   themeConfig: {
-    docsRepo:'eolinker/eoapi-docs',
-    docsBranch:'main',
-    repo: 'eolinker/eoapi',
-    logo: "/images/logo.svg",
-    editLinks:true,
-    editLinkText: '贡献文档',
-    lastUpdated: '最后更新',
-    nav: [
-      { text: "首页", link: "/index",  
+    algolia: {
+      apiKey: "your_api_key",
+      indexName: "index_name",
     },
-      { text: "文档", link: "/docs/about"},
+    docsRepo: "eolinker/eoapi-docs",
+    docsBranch: "main",
+    repo: "eolinker/eoapi",
+    logo: "/images/logo.svg",
+    editLinks: true,
+    editLinkText: "贡献文档",
+    lastUpdated: "最后更新",
+    nav: [
+      { text: "首页", link: "/index" },
+      { text: "文档", link: "/docs/about" },
       { text: "API", link: "/api/module" },
       {
         text: "下载",
@@ -41,7 +44,7 @@ module.exports = {
         {
           text: "产品手册",
           children: [
-            { text: "产品简介", link: "/docs/about"},
+            { text: "产品简介", link: "/docs/about" },
             {
               text: "API 管理",
               link: "/docs/apimanage",
@@ -55,7 +58,7 @@ module.exports = {
               text: "插件广场",
               link: "/docs/extensions",
             },
-            { text: "概念", link: "/docs/concepts"},
+            { text: "概念", link: "/docs/concepts" },
           ],
         },
         {
@@ -71,5 +74,5 @@ module.exports = {
       ],
     },
   },
-  srcExclude: ["README.md"],
+  srcExclude: ["README.md"]
 };

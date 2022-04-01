@@ -45,9 +45,30 @@
 .nav-bar-title {
   font-size: 0 !important;
 }
-.content img{
+.content img {
   margin: 0 auto;
 }
-.container{
-  max-width: 60rem!important;
+.container {
+  max-width: 60rem !important;
+}
+.medium-zoom-image {
+  z-index: 6;
+}
+.sidebar
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-link-item {
+  display: block;
+  padding: 0.3rem 1.5rem 0.3rem 5rem;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  font-weight: 400;
 }

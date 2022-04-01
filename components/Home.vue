@@ -11,6 +11,7 @@
     </div>
   </div>
   <img
+    data-zoomable
     src="../public/images/preview_1.png?token=GHSAT0AAAAAABRGKRUBJ634JVP7XL7KWAECYP3J36Q"
   />
 </template>
