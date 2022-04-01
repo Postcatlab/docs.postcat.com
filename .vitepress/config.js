@@ -2,7 +2,11 @@ module.exports = {
   lang: "zh-Hans",
   title: "EOAPI",
   description: "一个轻量的开源 API 工具",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["script", { src: "lib/medium-zoom.js" }],
+    ["script", { src: "zoom-image.js" }],
+  ],
   lastUpdated: true,
   themeConfig: {
     algolia: {
@@ -74,5 +78,5 @@ module.exports = {
       ],
     },
   },
-  srcExclude: ["README.md"]
+  srcExclude: ["README.md"],
 };

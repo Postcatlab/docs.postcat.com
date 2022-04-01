@@ -12,8 +12,5 @@
   "devDependencies": {
     "stylus": "^0.56.0",
     "vitepress": "^0.22.2"
-  },
-  "dependencies": {
-    "medium-zoom": "^1.0.6"
   }
 }
