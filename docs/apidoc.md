@@ -1,8 +1,10 @@
 # 编辑 API
-点击新建 API 按钮，新增一个 API 接口，我们在开始一个新接口之前，需要进行以下判断：
+我们在开始一个新接口之前，需要进行以下判断：
 - 请求协议是不是 HTTP/HTTPS？
-- API 是不是 RESTful 风格？
 - <a href="./concepts.html#json" target="_blank">请求体和响应体格式</a>是什么(XML、JSON、FormData、Raw)？
+- API 是不是 RESTful 风格？
+
+如果上面三个问题的答案都清楚了，就可以开始新增一个 API 接口。
 ## API 信息
 在编辑 API 的顶部填写 API 的请求协议、方式、地址、名称；
 ![](../assets/images/2022-04-01-17-54-42.png)
