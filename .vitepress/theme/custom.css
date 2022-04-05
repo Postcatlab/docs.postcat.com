@@ -52,7 +52,10 @@
   max-width: 60rem !important;
 }
 .medium-zoom-image {
-  z-index: 6;
+  z-index: 11;
+}
+.medium-zoom--opened .medium-zoom-overlay{
+  z-index: 10;
 }
 .sidebar
   > .sidebar-links

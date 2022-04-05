@@ -4,8 +4,8 @@ module.exports = {
   description: "一个轻量的开源 API 工具",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["script", { src: "lib/medium-zoom.js" }],
-    ["script", { src: "zoom-image.js" }],
+    ["script", { src: "/lib/medium-zoom.js" }],
+    ["script", { src: "/zoom-image.js" }],
   ],
   lastUpdated: true,
   themeConfig: {
