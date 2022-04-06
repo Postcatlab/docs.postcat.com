@@ -1,6 +1,6 @@
 <template>
   <h1 class="title">EOAPI</h1>
-  <p class="desc">一个轻量的开源 API 工具</p>
+  <p class="desc">一个可拓展的开源 API 工具</p>
   <div class="download-links-list f_row f_jc_ac">
     <div v-for="item in resourceInfo" class="download-links-card-item">
       <a :href="item.link" class="item-icon-show">

@@ -1,7 +1,7 @@
 module.exports = {
   lang: "zh-Hans",
   title: "EOAPI",
-  description: "一个轻量的开源 API 工具",
+  description: "一个可拓展的开源 API 工具",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["script", { src: "/lib/medium-zoom.js" }],
