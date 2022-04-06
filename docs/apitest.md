@@ -12,12 +12,12 @@
 
 ![](../assets/images/2022-03-30-11-45-40.png)
 
-通过类比现有的知识去学习新的知识往往更快，平时我们一般会在浏览器里看 API 请求信息，这些信息在 EOAPI 对应的位置是什么呢？相信通过下面的对照图你很快能知道如何在 EOAPI 测试：
+通过类比现有的知识去学习新的知识往往更快，平时我们一般会在浏览器里看 API 请求信息，这些信息在 Eoapi 对应的位置是什么呢？相信通过下面的对照图你很快能知道如何在 Eoapi 测试：
 
 ![](../assets/images/http-headers-reflect.png)
 <p align=center>请求 URL/请求方式/请求头/Query 参数</p>
 
-API Path 里面可能填写了 Query 参数，EOAPI 会将它自动同步到 Query 参数的表格里面。
+API Path 里面可能填写了 Query 参数，Eoapi 会将它自动同步到 Query 参数的表格里面。
 
 首先确认你的  <a href="./concepts.html#json" target="_blank">HTTP 请求体格式</a>，选择相应的请求体格式后点击测试按钮。
 

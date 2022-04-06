@@ -1,6 +1,6 @@
 module.exports = {
   lang: "zh-Hans",
-  title: "EOAPI",
+  title: "Eoapi",
   description: "一个可拓展的开源 API 工具",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
