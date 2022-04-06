@@ -2,7 +2,11 @@
   <h1 class="title">Eoapi</h1>
   <p class="desc">一个可拓展的开源 API 工具</p>
   <div class="download-links-list f_row f_jc_ac">
-    <div v-for="item in resourceInfo" class="download-links-card-item">
+    <div
+      v-for="item in resourceInfo"
+      :key="item.id"
+      class="download-links-card-item"
+    >
       <a :href="item.link" class="item-icon-show">
         <i class="iconfont" :class="`icon-${item.icon}`"></i>
         <i class="iconfont icon-download"></i>
@@ -55,7 +59,7 @@ export default {
             );
             item.link = assetItem.browser_download_url;
           });
-          console.log(this.resourceInfo);
+          // console.log(this.resourceInfo);
         });
     },
   },
