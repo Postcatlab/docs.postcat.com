@@ -21,7 +21,7 @@ import Home from './components/Home.vue'
 <p align="center">一键测试获取清晰、完整的 API 调试信息。</p>
 
 ## 插件广场
-:::warning
+:::tip
 功能预告
 :::
 ![](../assets/images/2022-04-08-15-07-48.png)
