@@ -10,8 +10,9 @@ module.exports = {
   lastUpdated: true,
   themeConfig: {
     algolia: {
-      apiKey: "your_api_key",
-      indexName: "index_name",
+      appId: "DWNA8Q7OW9",
+      apiKey: "74082b5eb9ea2c675445503c70f6b4e2",
+      indexName: "eoapi",
     },
     docsRepo: "eolinker/eoapi-docs",
     docsBranch: "main",
