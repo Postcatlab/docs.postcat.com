@@ -11,7 +11,7 @@ Eoapi 是一款和 Postman 一样好用的开源 API 工具，它更轻量，同
 
 - 访问 [Releases](https://github.com/eolinker/eoapi/releases) 下载 Windows、macOS 安装包。
 
-![](../public/images/preview_1.png?token=GHSAT0AAAAAABRGKRUBJ634JVP7XL7KWAECYP3J36Q)
+![](../public/images/eoapi-demo.jpg)
 
 Eoapi 全称是 Easy & Open API，我们希望通过工具让 API 管理更简单、更开放。
 
