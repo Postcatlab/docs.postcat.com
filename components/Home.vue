@@ -14,10 +14,7 @@
       <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
-  <img
-    data-zoomable
-    src="../public/images/eoapi-demo.jpg"
-  />
+  <img data-zoomable src="../public/images/eoapi-demo.jpg" />
 </template>
 
 <script>
@@ -80,6 +77,7 @@ export default {
 
 .desc {
   text-align: center;
+  font-size:20px;
 }
 
 .download-links-list {

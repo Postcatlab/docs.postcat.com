@@ -13,3 +13,6 @@
 2. <a href="http://stackoverflow.com/questions/tagged/eoapi"><img style="vertical-align: middle;" alt="Stack Overflow" src="../public/images/stackoverflow.svg" width="140"></a>(英文)
 
 3. <a href="https://segmentfault.com/"><img style="vertical-align: middle;" src="../public/images/segmentfault.svg" width="140" height="26" class="lg-show" alt="segmentfault"></a>(中文)
+
+## 实时通讯
+![微信群](../public/images/weixin_qrcode.jpeg)

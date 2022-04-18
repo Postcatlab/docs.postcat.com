@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "mushan.vscode-paste-image"
+        "mushan.vscode-paste-image",
+        "octref.vetur"
     ]
 }

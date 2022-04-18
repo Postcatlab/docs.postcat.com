@@ -1,7 +1,7 @@
 window.addEventListener("load", function (event) {
   let observer = new MutationObserver(() => {
-    mediumZoom(document.querySelectorAll("img"),{
-      background:  "rgba(0, 0, 0, 0.5)",
+    mediumZoom(document.querySelectorAll("main img"), {
+      background: "rgba(0, 0, 0, 0.5)",
     });
   });
   let options = {
