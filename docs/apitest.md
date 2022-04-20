@@ -22,7 +22,7 @@
 
 API Path 里面可能填写了 Query 参数，Eoapi 会将它自动同步到 Query 参数的表格里面。
 
-首先确认你的 <a href="./concepts.html#json" target="_blank">HTTP 请求体格式</a>，选择相应的请求体格式后点击测试按钮。
+首先确认你的 <a href="./FAQ.html#json" target="_blank">HTTP 请求体格式</a>，选择相应的请求体格式后点击测试按钮。
 
 ![](../assets/images/2022-04-01-15-31-56.png)
 

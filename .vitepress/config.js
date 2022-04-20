@@ -28,7 +28,7 @@ module.exports = {
       "/": {
         selectText: "选择语言",
         label: "简体中文",
-        editLinkText: "Contribute to this document",
+        editLinkText: "贡献此文档",
         lastUpdated: "最后更新",
         nav: [
           { text: "首页", link: "/index" },
@@ -72,7 +72,7 @@ module.exports = {
                   text: "插件广场",
                   link: "/docs/extensions",
                 },
-                { text: "概念", link: "/docs/concepts" },
+                { text: "常见问题", link: "/docs/FAQ" },
               ],
             },
             {
@@ -86,12 +86,12 @@ module.exports = {
               children: [{ text: "模块开发指南", link: "/api/module" }],
             },
           ],
-        }
+        },
       },
       "/en/": {
         selectText: "Languages",
         label: "English",
-        editLinkText: "贡献此文档",
+        editLinkText: "Contribute to this document",
         nav: [
           { text: "Home", link: "/index" },
           {
