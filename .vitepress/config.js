@@ -93,7 +93,7 @@ module.exports = {
         label: "English",
         editLinkText: "Contribute to this document",
         nav: [
-          { text: "Home", link: "/index" },
+          { text: "Home", link: "/en/index" },
           {
             text: "Download",
             ariaLabel: "Download",
