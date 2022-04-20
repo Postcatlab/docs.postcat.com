@@ -31,6 +31,10 @@ API 即"应用编程接口"，是世界上所有软件的基本组成部分，�
 }
 ```
 ### Form-data
+有两种格式的 Form-data（表单） 数据，`multipart/form-data` 和 `application/x-www-form-urlencoded`;
+
+现代浏览器中，使用表单提交请求的情况已经比较少了，所以用得比较多的是 `application/x-www-form-urlencoded`，但是有一个特例，如果你的请求需要上传文件，那请求体格式无疑是 `multipart/form-data` 了。
+
 1. Form-data[content-type="multipart/form-data;"]
 
 ![](../assets/images/formdata.png) 

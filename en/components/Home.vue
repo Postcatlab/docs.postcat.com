@@ -1,6 +1,6 @@
 <template>
   <h1 class="title">Eoapi</h1>
-  <p class="desc">一个可拓展的开源 API 工具</p>
+  <p class="desc">An extensible open source API tool</p>
   <div class="download-links-list f_row f_jc_ac">
     <div
       v-for="item in resourceInfo"
@@ -14,7 +14,7 @@
       <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
-  <img data-zoomable src="../public/images/eoapi-demo.jpg" />
+  <img data-zoomable src="../../public/images/eoapi-demo.jpg" />
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
       resourceInfo: [
         {
           id: "win",
-          name: "Windows 客户端",
+          name: "Windows",
           icon: "windows",
           keyword: "Setup",
           suffix: "exe",
@@ -33,7 +33,7 @@ export default {
         },
         {
           id: "mac",
-          name: "macOS 客户端",
+          name: "macOS",
           icon: "mac",
           suffix: "dmg",
           link: "",
