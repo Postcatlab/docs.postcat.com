@@ -24,7 +24,7 @@ module.exports = {
     nav: [
       { text: "首页", link: "/index" },
       { text: "文档", link: "/docs/about" },
-      { text: "API", link: "/api/module" },
+      // { text: "API", link: "/api/module" },
       {
         text: "下载",
         ariaLabel: "Download",
