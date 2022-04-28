@@ -16,6 +16,8 @@
 
 通过类比现有的知识去学习新的知识往往更快，平时我们一般会在浏览器里看 API 请求信息，这些信息在 Eoapi 对应的位置是什么呢？相信通过下面的对照图你很快能知道如何在 Eoapi 测试：
 
+> 下划线颜色相同代表相同模块
+
 ![](../assets/images/http-headers-reflect.png)
 
 <p align=center>请求 URL/请求方式/请求头/Query 参数</p>
@@ -28,3 +30,6 @@ API Path 里面可能填写了 Query 参数，Eoapi 会将它自动同步到 Que
 
 就可以看到相应 API 响应信息啦！
 ![](../assets/images/2022-04-01-15-35-13.png)
+
+通过点击测试历史，还可以回溯当时测试的所有 API 请求信息，快速回归测试。
+![](../assets/images/2022-04-28-11-56-55.png)
