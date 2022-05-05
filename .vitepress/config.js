@@ -59,15 +59,9 @@ module.exports = {
               text: "产品手册",
               children: [
                 { text: "产品简介", link: "/docs/about" },
-                {
-                  text: "API 管理",
-                  link: "/docs/apimanage",
-                  children: [
-                    { text: "接口测试", link: "/docs/apitest" },
-                    { text: "接口文档", link: "/docs/apidoc" },
-                    { text: "测试环境", link: "/docs/env" },
-                  ],
-                },
+                { text: "接口测试", link: "/docs/apitest" },
+                { text: "接口文档", link: "/docs/apidoc" },
+                { text: "测试环境", link: "/docs/env" },
                 {
                   text: "插件广场",
                   link: "/docs/extensions",
