@@ -33,7 +33,7 @@ module.exports = {
         nav: [
           { text: "首页", link: "/index" },
           { text: "文档", link: "/docs/about" },
-          // { text: "API", link: "/api/module" },
+          { text: "API", link: "/api/overview" },
           {
             text: "下载",
             ariaLabel: "Download",
@@ -76,9 +76,18 @@ module.exports = {
           ],
           "/api/": [
             {
-              text: "API",
-              children: [{ text: "模块开发指南", link: "/api/module" }],
+              text: "插件文档",
+              link: "/api/overview",
+              children: [
+                { text: "概况", link: "/api/overview" },
+                { text: "快速开始", link: "/api/get-started" },
+                { text: "可贡献功能点", link: "/api/feature-contribution" },
+              ],
             },
+            // {
+            //   text: "API",
+            //   children: [{ text: "模块开发指南", link: "/api/module" }],
+            // },
           ],
         },
       },
