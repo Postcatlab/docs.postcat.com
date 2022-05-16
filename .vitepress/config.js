@@ -88,6 +88,7 @@ module.exports = {
         editLinkText: "Contribute to this document",
         nav: [
           { text: "Home", link: "/en/index" },
+          { text: "Document", link: "/en/docs/about" },
           {
             text: "Download",
             ariaLabel: "Download",
@@ -107,6 +108,10 @@ module.exports = {
           { text: "Live Demo", link: "https://demo.eoapi.io/" },
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
+        sidebar: {
+          "/en/docs/": [
+          ],
+        },
       },
     },
     docsRepo: "eolinker/eoapi-docs",
