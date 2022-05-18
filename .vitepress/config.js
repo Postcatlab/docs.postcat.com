@@ -88,7 +88,6 @@ module.exports = {
               text: "插件文档",
               link: "/api/overview",
               children: [
-                { text: "概况", link: "/api/overview" },
                 { text: "快速开始", link: "/api/get-started" },
                 { text: "可贡献功能点", link: "/api/feature-contribution" },
               ],
