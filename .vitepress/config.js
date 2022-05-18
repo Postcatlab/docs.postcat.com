@@ -71,8 +71,8 @@ module.exports = {
                   text: "插件广场",
                   link: "/docs/extensions",
                   children: [
-                    { text: "推送插件", link: "/docs/extension-push" },
-                    { text: "导出插件", link: "/docs/extension-export" },
+                    { text: "推送", link: "/docs/extension-push" },
+                    { text: "导出", link: "/docs/extension-export" },
                   ],
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
@@ -85,7 +85,7 @@ module.exports = {
           ],
           "/api/": [
             {
-              text: "插件文档",
+              text: "插件",
               link: "/api/overview",
               children: [
                 { text: "快速开始", link: "/api/get-started" },
