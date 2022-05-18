@@ -66,6 +66,10 @@ module.exports = {
                   text: "插件广场",
                   link: "/docs/extensions",
                 },
+                {
+                  text: "数据源",
+                  link: "/docs/storage",
+                },
                 { text: "常见问题", link: "/docs/FAQ" },
               ],
             },
@@ -109,8 +113,7 @@ module.exports = {
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
         sidebar: {
-          "/en/docs/": [
-          ],
+          "/en/docs/": [],
         },
       },
     },
