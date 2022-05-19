@@ -33,7 +33,7 @@ module.exports = {
         nav: [
           { text: "首页", link: "/index" },
           { text: "文档", link: "/docs/about" },
-          // { text: "API", link: "/api/module" },
+          { text: "API", link: "/api/overview" },
           {
             text: "下载",
             ariaLabel: "Download",
@@ -59,12 +59,21 @@ module.exports = {
               text: "产品手册",
               children: [
                 { text: "产品简介", link: "/docs/about" },
-                { text: "接口测试", link: "/docs/apitest" },
-                { text: "接口文档", link: "/docs/apidoc" },
-                { text: "测试环境", link: "/docs/env" },
+                {
+                  text: "基础功能",
+                  children: [
+                    { text: "接口测试", link: "/docs/apitest" },
+                    { text: "接口文档", link: "/docs/apidoc" },
+                    { text: "测试环境", link: "/docs/env" },
+                  ],
+                },
                 {
                   text: "插件广场",
                   link: "/docs/extensions",
+                  children: [
+                    { text: "推送", link: "/docs/extension-push" },
+                    { text: "导出", link: "/docs/extension-export" },
+                  ],
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
               ],
@@ -76,9 +85,17 @@ module.exports = {
           ],
           "/api/": [
             {
-              text: "API",
-              children: [{ text: "模块开发指南", link: "/api/module" }],
+              text: "插件",
+              link: "/api/overview",
+              children: [
+                { text: "快速开始", link: "/api/get-started" },
+                { text: "可贡献功能点", link: "/api/feature-contribution" },
+              ],
             },
+            // {
+            //   text: "API",
+            //   children: [{ text: "模块开发指南", link: "/api/module" }],
+            // },
           ],
         },
       },
