@@ -2,29 +2,28 @@
 
 ## Feature
 
-Feature 代表功能级别的插件，除了在 `package.json` 文件中包含如 `main`、`moduleID`、`moduleName` 等必要配置外；
-
-还需要额外配置 `features` 字段下的 `apimanager.{type}` ，`type`根据插件类别不同可以是:
-
-- `export`：拓展导出 API 数据
-- `sync`：拓展将 API 数据推送到其他平台
+Feature 代表功能级别的插件，除了[必填的配置项](/api/get-started.html#%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D)，我们需要根据你想拓展的功能额外配置 `features` 字段，格式如下：
 
 ```json
+//package.json
 {
-  "description": "{插件的描述}",
-  "main": "{入口文件}",
-  "module": "{入口文件}",
-  "moduleID": "{插件ID}",
-  //... 必填字端
+  "name": "{插件名称}",
+  //... 其他必填字段
   "features": {
-    "apimanager.export": {
+    "apimanage.export": {
       "action": "{导出的主函数名}",
-      "label": "{用户在功能区域看的标识}"
-      // ... 其他个性化配置项
+      "label": "{导出功能标题}"
+      // ... 其他配置项
     }
   }
 }
 ```
+
+支持拓展的功能
+| features | 描述 |
+| ---- | ---- |
+| apimanage.export | 自定义导出 API 数据 |
+| apimanage.sync | 将 API 数据推送到其他各个平台 |
 
 ### 1. 导出
 
@@ -50,7 +49,7 @@ Feature 代表功能级别的插件，除了在 `package.json` 文件中包含�
 
 ### 2. 推送
 
-推送类插件允许我们将 Eoapi 上的数据一键推送到各个应用平台，比如：
+推送类插件允许我们将 Eoapi 上的数据一键推送到各个应用平台，例如：
 
 - 推送到网关上完成 API 上线
 - 和低代码平台结合，将 API 快速变成低代码平台中可使用的组件等。
@@ -78,7 +77,9 @@ Feature 代表功能级别的插件，除了在 `package.json` 文件中包含�
 
 - 导入插件
 - API 文档生成代码
+- API 信息生成数据
 - 语言包
 - 主题
+- 快捷键
 
 你想要拓展的功能不在我们的计划上？请在 [Issue](https://github.com/eolinker/eoapi/issues) 提出你的需求，十分感谢。
