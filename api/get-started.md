@@ -3,22 +3,38 @@
 此篇文档介绍插件开发的整套流程，开发前，请确保你的电脑已经安装了 [Node.js](https://nodejs.org/en/)。
 ## 开发
 
-命令行工具可以帮助你调试，当拓展开发完成后，你也需要用它上传开发好的拓展信息到拓展市场。
+命令行工具可以帮助你调试，当插件开发完成后，你也需要用它上传开发好的插件信息到插件广场。
 
 安装命令行工具
+
 ```bash
 $ npm i -g @eoapi/cli
 ```
 
 现在你可以在全局范围内使用 `eo` 命令了。
 
-### 创建拓展模板
+### 创建插件模板
 
 现在可以创建一个最简单的模板，它会包含最基本的构建配置，如有需要你可以修改配置、甚至完全使用自己的配置。
 
-> 目前仅支持创建 feature 类型的拓展
+```bash
+$ eo g foo
+# or
+$ eo generate foo
+```
+
+> 目前仅支持创建 feature 类型的插件
 
 ![create-extension](../assets/images/create-extension.svg)
+
+它会在当前目录创造一个npm工程，安装好默认的依赖后即可开始正式开发。
+
+```
+$ cd foo
+$ npm i
+```
+
+> 该命令与下面介绍的 `debug、undebug、upload` 等命令都在同一层级运行，foo 指的是 npm 工程文件夹，与 package.json 中的字段无关。
 
 ### 文件介绍
 
@@ -29,9 +45,9 @@ export const start = () => {
 };
 ```
 
-最终会构建出一个 `umd` 规范的 JS 包，它至少导出一个主函数。
+最终会构建出一个 `umd` 规范的 JS 包，它至少导出一个主函数（命名导出）。
 
-请注意：函数的名称（在本例中是`start`）需要与 `package.json` 中的 `features.apimanager.export.action` 字段的值保持一致：
+请注意：主函数的名称（在本例中是`start`）需要与 `package.json` 中的 `features.apimanager.export.action` 字段的值保持一致：
 
 ```json
 // package.json
@@ -46,19 +62,19 @@ export const start = () => {
 
 ### 配置介绍
 
-关于拓展暴露出来的所有配置项，都在 `package.json` 文件中，除了 `npm schema` 本身的规范字段外，与`eoapi`拓展相关的主要有以下字段，这里以导出类型的拓展为例：
+关于插件暴露出来的所有配置项，都在 `package.json` 文件中，除了 `npm schema` 本身的规范字段外，与 `eoapi` 插件相关的主要有以下字段，这里以导出类型的插件为例：
 
 ```json
 {
-  "version": "{npm包的版本号，同时也作为拓展的版本号}",
-  "description": "{拓展的描述}",
+  "version": "{npm包的版本号，同时也作为插件的版本号}",
+  "description": "{插件的描述}",
   "main": "{入口文件}",
   "module": "{入口文件}",
-  "moduleID": "{拓展ID}",
-  "moduleName": "{显示在拓展时长的名称}",
-  "moduleType": "{拓展类型：feature}",
-  "logo": "{显示在拓展市场的Logo}",
-  // 在keywords中填写关键字段，利于在拓展市场中搜索
+  "moduleID": "{插件ID}",
+  "moduleName": "{显示在插件广场的名称}",
+  "moduleType": "{插件类型：feature}",
+  "logo": "{显示在插件广场的Logo}",
+  // 在keywords中填写关键字段，利于在插件广场中搜索
   "keywords": [],
   "author": "{作者}",
   "features": {
@@ -71,24 +87,31 @@ export const start = () => {
 }
 ```
 
-系统在运行拓展时，会获取 `feature.apimanager.export` 下的 `action` 得到函数名。进而从拓展的包内容中导入该函数并执行。
+系统在运行插件时，会获取 `feature.apimanager.export` 下的 `action` 得到函数名。进而从插件的包内容中导入该函数并执行。
 
 ## 调试
 
-当我们开发了一个叫 `foo` 的拓展后，需要将它映射到本地，并让 Eoapi 能够识别它。我们已经帮你做了一些工作，你只需要运行以下命令，即等效于正式安装了拓展在本地。
+当我们开发了一个叫 `foo` 的插件后，需要将它映射到本地，并让 Eoapi 能够识别它。我们已经帮你做了一些工作，你只需要运行以下命令，即等效于正式安装了插件在本地。
 
-```
+```bash
 $ eo debug foo
 ```
 
 :::warning
-目前部分拓展需要重启 Eoapi 后才能看到更新，我们正在尽快开发体验良好的热更新功能。
+目前部分插件需要重启 Eoapi 后才能看到更新，我们正在尽快开发体验良好的热更新功能。
 :::
+
+debug命令毕竟不是正式安装，当需要正式安装插件时，为了排除影响，可以先运行 `undebug` 命令卸载本地的插件。
+```
+eo undebug foo
+```
 
 ## 上传
 
-开发完成并构建后，通过以下命令将拓展上传到官方的拓展市场。别忘了将拓展发布到`npm`平台，因为目前拓展是以 `npm` 的形式安装的。
+开发完成并构建后，通过以下命令将插件上传到官方的插件广场。别忘了将插件发布到`npm`平台，因为目前插件是以 `npm` 的形式安装的。
 
 ```bash
 $ eo upload foo
 ```
+
+经过官方审核后，才能在真正在插件广场中看到，整个过程通常需要一天的时间。

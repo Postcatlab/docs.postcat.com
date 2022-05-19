@@ -4,16 +4,16 @@
 
 Feature 代表功能级别的插件，除了在 `package.json` 文件中包含如 `main`、`moduleID`、`moduleName` 等必要配置外；
 
-需要额外配置 `features` 字段下的 `apimanager.{type}` ，`type`根据拓展类别不同可以是:
+需要额外配置 `features` 字段下的 `apimanager.{type}` ，`type`根据插件类别不同可以是:
 * `export`：拓展导出 API 数据
 * `sync`：拓展将 API 数据同步到其他平台
 
 ```json
 {
-  "description": "{拓展的描述}",
+  "description": "{插件的描述}",
   "main": "{入口文件}",
   "module": "{入口文件}",
-  "moduleID": "{拓展ID}",
+  "moduleID": "{插件ID}",
   //... 必填字端
   "features": {
     "apimanager.export": {
@@ -50,7 +50,7 @@ Feature 代表功能级别的插件，除了在 `package.json` 文件中包含�
   - `action`：主函数名称
   - `label`：显示在 UI 上导出区域的名称
 
-推送到其他平台的工作由拓展自行完成，由于推送是在浏览器环境下进行，因此只能通过`http`协议进行。
+推送到其他平台的工作由插件自行完成，由于推送是在浏览器环境下进行，因此只能通过`http`协议进行。
 
 ### 插件功能预告
 :::warning
@@ -61,4 +61,4 @@ Feature 代表功能级别的插件，除了在 `package.json` 文件中包含�
 * 语言包
 * 主题
 
-你想要拓展其他功能不在我们的计划上？请在 [Issue](https://github.com/eolinker/eoapi/issues) 提出你的需求，十分感谢。
+你想要其他功能插件不在我们的计划上？请在 [Issue](https://github.com/eolinker/eoapi/issues) 提出你的需求，十分感谢。
