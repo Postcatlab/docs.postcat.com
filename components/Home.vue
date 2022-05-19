@@ -38,13 +38,13 @@ export default {
           suffix: "dmg",
           link: "",
         },
-        {
-          id: "mac",
-          name: "macOS(M1) 客户端",
-          icon: "mac",
-          suffix: "arm64.dmg",
-          link: "",
-        },
+        // {
+        //   id: "mac",
+        //   name: "macOS(M1) 客户端",
+        //   icon: "mac",
+        //   suffix: "arm64.dmg",
+        //   link: "",
+        // },
       ],
     };
   },

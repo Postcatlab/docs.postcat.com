@@ -25,7 +25,7 @@ export default {
       resourceInfo: [
         {
           id: "win",
-          name: "Windows",
+          name: "Windows 客户端",
           icon: "windows",
           keyword: "Setup",
           suffix: "exe",
@@ -33,11 +33,18 @@ export default {
         },
         {
           id: "mac",
-          name: "macOS",
+          name: "macOS(Intel) 客户端",
           icon: "mac",
           suffix: "dmg",
           link: "",
         },
+        // {
+        //   id: "mac",
+        //   name: "macOS(M1) 客户端",
+        //   icon: "mac",
+        //   suffix: "arm64.dmg",
+        //   link: "",
+        // },
       ],
     };
   },

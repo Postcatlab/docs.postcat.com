@@ -39,15 +39,20 @@ module.exports = {
             ariaLabel: "Download",
             items: [
               {
-                text: "MacOS",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
-                target: "_self",
-              },
-              {
                 text: "Windows",
                 link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
                 target: "_self",
               },
+              {
+                text: "MacOS(Intel)",
+                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
+                target: "_self",
+              },
+              // {
+              //   text: "MacOS(M1)",
+              //   link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
+              //   target: "_self",
+              // },
             ],
           },
           { text: "Live Demo", link: "https://demo.eoapi.io/" },
@@ -126,8 +131,7 @@ module.exports = {
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
         sidebar: {
-          "/en/docs/": [
-          ],
+          "/en/docs/": [],
         },
       },
     },
