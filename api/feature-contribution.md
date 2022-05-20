@@ -147,6 +147,28 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
       "icon": "",
       "extestion": ""
     }
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Push",
+      "properties": {
+        "eolink.remoteServer.url": {
+          "type": "string",
+          "required": true,
+          "default": "http://127.0.0.1",
+          "label": "远程服务器地址",
+          "description": ""
+        },
+        "eolink.remoteServer.token": {
+          "type": "string",
+          "required": false,
+          "default": "XXXXXXXX",
+          "label": "Token",
+          "description": ""
+        }
+      }
+    }
   }
 }
 ```
