@@ -503,11 +503,6 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
-medium-zoom@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npmmirror.com/medium-zoom/-/medium-zoom-1.0.6.tgz#9247f21ca9313d8bbe9420aca153a410df08d027"
-  integrity sha512-UdiUWfvz9fZMg1pzf4dcuqA0W079o0mpqbTnOz5ip4VGYX96QjmbM+OgOU/0uOzAytxC0Ny4z+VcYQnhdifimg==
-
 minimatch@^3.0.4:
   version "3.1.2"
   resolved "https://registry.npmmirror.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"

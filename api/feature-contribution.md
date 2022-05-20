@@ -4,7 +4,7 @@
 
 Feature 代表功能级别的插件，除了在 `package.json` 文件中包含如 `main`、`moduleID`、`moduleName` 等必要配置外；
 
-还需要额外配置 `features` 字段下的 `apimanager.{type}` ，`type`根据插件类别不同可以是:
+还需要额外配置 `features` 字段下的 `apimanage.{type}` ，`type`根据插件类别不同可以是:
 
 - `export`：拓展导出 API 数据
 - `sync`：拓展将 API 数据推送到其他平台
@@ -17,7 +17,7 @@ Feature 代表功能级别的插件，除了在 `package.json` 文件中包含�
   "moduleID": "{插件ID}",
   //... 必填字端
   "features": {
-    "apimanager.export": {
+    "apimanage.export": {
       "action": "{导出的主函数名}",
       "label": "{用户在功能区域看的标识}"
       // ... 其他个性化配置项

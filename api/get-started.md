@@ -47,13 +47,13 @@ export const start = () => {
 
 最终会构建出一个 `umd` 规范的 JS 包，它至少导出一个主函数（命名导出）。
 
-请注意：主函数的名称（在本例中是`start`）需要与 `package.json` 中的 `features.apimanager.export.action` 字段的值保持一致：
+请注意：主函数的名称（在本例中是`start`）需要与 `package.json` 中的 `features.apimanage.export.action` 字段的值保持一致：
 
 ```json
 // package.json
 {
   "features": {
-    "apimanager.export": {
+    "apimanage.export": {
       "action": "start"
     }
   }
@@ -78,7 +78,7 @@ export const start = () => {
   "keywords": [],
   "author": "{作者}",
   "features": {
-    "apimanager.export": {
+    "apimanage.export": {
       "action": "{导出的主函数名}",
       "label": "{用户在功能区域看的标识}"
       // ... 其他个性化配置项
@@ -87,7 +87,7 @@ export const start = () => {
 }
 ```
 
-系统在运行插件时，会获取 `feature.apimanager.export` 下的 `action` 得到函数名。进而从插件的包内容中导入该函数并执行。
+系统在运行插件时，会获取 `feature.apimanage.export` 下的 `action` 得到函数名。进而从插件的包内容中导入该函数并执行。
 
 ## 调试
 
