@@ -34,29 +34,29 @@ module.exports = {
           { text: "首页", link: "/index" },
           { text: "文档", link: "/docs/about" },
           { text: "API", link: "/api/overview" },
+          { text: "Live Demo", link: "https://demo.eoapi.io/" },
+          { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
             text: "下载",
             ariaLabel: "Download",
             items: [
               {
                 text: "Windows",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
+                link: "https://github.com/eolinker/eoapi/releases/download/v1.0.0/eoapi-Setup-1.0.0.exe",
                 target: "_self",
               },
               {
                 text: "MacOS(Intel)",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
+                link: "https://github.com/eolinker/eoapi/releases/download/v1.0.0/eoapi-1.0.0.dmg",
                 target: "_self",
               },
-              // {
-              //   text: "MacOS(M1)",
-              //   link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
-              //   target: "_self",
-              // },
+              {
+                text: "MacOS(M1)",
+                link: "https://github.com/eolinker/eoapi/releases/download/v1.0.0/eoapi-1.0.0-arm64.dmg",
+                target: "_self",
+              },
             ],
           },
-          { text: "Live Demo", link: "https://demo.eoapi.io/" },
-          { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
         sidebar: {
           "/docs/": [
@@ -111,24 +111,29 @@ module.exports = {
         nav: [
           { text: "Home", link: "/en/index" },
           { text: "Document", link: "/en/docs/about" },
+          { text: "Live Demo", link: "https://demo.eoapi.io/" },
+          { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
             text: "Download",
             ariaLabel: "Download",
             items: [
               {
-                text: "MacOS",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
+                text: "Windows",
+                link: "https://github.com/eolinker/eoapi/releases/download/v1.0.0/eoapi-Setup-1.0.0.exe",
                 target: "_self",
               },
               {
-                text: "Windows",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
+                text: "MacOS",
+                link: "https://github.com/eolinker/eoapi/releases/download/v1.0.0/eoapi-1.0.0.dmg",
+                target: "_self",
+              },
+              {
+                text: "MacOS(M1)",
+                link: "https://github.com/eolinker/eoapi/releases/download/v1.0.0/eoapi-1.0.0-arm64.dmg",
                 target: "_self",
               },
             ],
           },
-          { text: "Live Demo", link: "https://demo.eoapi.io/" },
-          { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
         sidebar: {
           "/en/docs/": [],
