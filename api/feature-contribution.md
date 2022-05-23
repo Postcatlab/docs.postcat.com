@@ -185,5 +185,7 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
 - 语言包
 - 主题
 - 快捷键
+<!-- - 文档变更推送通知(需要用户系统) -->
+
 
 你想要拓展的功能不在我们的计划上？请在 [Issue](https://github.com/eolinker/eoapi/issues) 提出你的需求，十分感谢。
