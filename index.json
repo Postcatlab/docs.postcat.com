@@ -1,9 +1,0 @@
-{
-  "string": "test",
-  "array": [{ "dom1": {}, "dom2": false, "dom3": [] }],
-  "object": { "dom1": "", "dom2": 0 },
-  "null": null,
-  "float": 11.11,
-  "int": 1,
-  "boolean": false
-}
