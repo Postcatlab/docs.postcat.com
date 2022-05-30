@@ -1,5 +1,5 @@
 const version = "1.0.2",
-  resourceUrl = "http://data.eoapi.eolink.com";
+  resourceUrl = "https://data.eoapi.eolink.com";
 module.exports = {
   lang: "zh-Hans",
   locales: {
