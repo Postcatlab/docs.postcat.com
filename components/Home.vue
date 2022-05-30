@@ -18,7 +18,9 @@
 </template>
 
 <script>
-let version = "1.0.2";
+let version = "1.0.2",
+  resourceUrl = "https://github.com/eolinker/eoapi/releases/latest/download";
+// "https://data.eoapi.eolink.com";;
 export default {
   name: "home",
   data() {
@@ -30,21 +32,21 @@ export default {
           icon: "windows",
           keyword: "Setup",
           suffix: "exe",
-          link: `https://data.eoapi.eolink.com/eoapi-Setup-${version}.exe`,
+          link: `${resourceUrl}/eoapi-Setup-${version}.exe`,
         },
         {
           id: "mac",
           name: "macOS(Intel) 客户端",
           icon: "mac",
           suffix: "dmg",
-          link: `https://data.eoapi.eolink.com/eoapi-${version}.dmg`,
+          link: `${resourceUrl}/eoapi-${version}.dmg`,
         },
         {
           id: "mac",
           name: "macOS(M1) 客户端",
           icon: "mac",
           suffix: "arm64.dmg",
-          link: `https://data.eoapi.eolink.com/eoapi-${version}-arm64.dmg`,
+          link: `${resourceUrl}/eoapi-${version}-arm64.dmg`,
         },
       ],
     };
