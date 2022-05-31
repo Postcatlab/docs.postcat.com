@@ -1,6 +1,5 @@
 const version = "1.0.2",
-  resourceUrl = "https://github.com/eolinker/eoapi/releases/latest/download";
-  // "https://data.eoapi.eolink.com";
+  resourceUrl = "https://packages.eoapi.io";
 module.exports = {
   lang: "zh-Hans",
   locales: {
