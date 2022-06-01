@@ -18,6 +18,8 @@
 </template>
 
 <script>
+let version = "1.0.2",
+  resourceUrl = "https://packages.eoapi.io";
 export default {
   name: "home",
   data() {
@@ -29,22 +31,22 @@ export default {
           icon: "windows",
           keyword: "Setup",
           suffix: "exe",
-          link: "",
+          link: `${resourceUrl}/eoapi-Setup-${version}.exe`,
         },
         {
           id: "mac",
           name: "macOS(Intel) 客户端",
           icon: "mac",
           suffix: "dmg",
-          link: "",
+          link: `${resourceUrl}/eoapi-${version}.dmg`,
         },
         {
           id: "mac",
           name: "macOS(M1) 客户端",
           icon: "mac",
           suffix: "arm64.dmg",
-          link: "",
-        }
+          link: `${resourceUrl}/eoapi-${version}-arm64.dmg`,
+        },
       ],
     };
   },
@@ -88,7 +90,7 @@ export default {
     },
   },
   mounted() {
-    this.getDownloadResource();
+    // this.getDownloadResource();
   },
 };
 </script>

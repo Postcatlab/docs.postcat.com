@@ -40,32 +40,6 @@ $ cd foo
 $ npm i
 ```
 
-### 功能代码
-
-它至少导出一个函数（命名导出），以导出 OpenAPI 格式的插件为例，入参一般是应用提供的数据例如 API 信息，导出转换后的内容。
-
-```js
-// src/index.js
-export const exportOpenAPI = (apiInfo) => {
-  return transformEoapiToOpenAPI(apiInfo); // 将 Eoapi 格式的数据转换成 OpenAPI 格式的数据
-};
-```
-
-:::warning
-导出函数的名称（在本例中是`exportOpenAPI`）需要与 `package.json` 中的 `features.apimanage.export.action` 字段的值保持一致。
-:::
-
-```json
-// package.json
-{
-  "features": {
-    "apimanage.export": {
-      "action": "exportOpenAPI"
-    }
-  }
-}
-```
-
 ### 入口文件
 
 Eoapi 应用需要通过入口文件 `package.json` 找到插件，了解插件的信息，例如名称、版本号、拓展哪部分功能。
@@ -96,6 +70,32 @@ Eoapi 应用需要通过入口文件 `package.json` 找到插件，了解插件�
 ```
 
 系统在运行插件时，会获取 `feature.apimanage.export` 下的 `action` 得到函数名。进而从插件的包内容中导入该函数并执行。
+
+### 功能代码
+
+它至少导出一个函数（命名导出），以导出 OpenAPI 格式的插件为例，入参一般是应用提供的数据例如 API 信息，导出转换后的内容。
+
+```js
+// src/index.js
+export const exportOpenAPI = (apiInfo) => {
+  return transformEoapiToOpenAPI(apiInfo); // 将 Eoapi 格式的数据转换成 OpenAPI 格式的数据
+};
+```
+
+:::warning
+导出函数的名称（在本例中是`exportOpenAPI`）需要与 `package.json` 中的 `features.apimanage.export.action` 字段的值保持一致。
+:::
+
+```json
+// package.json
+{
+  "features": {
+    "apimanage.export": {
+      "action": "exportOpenAPI"
+    }
+  }
+}
+```
 
 ## 调试
 

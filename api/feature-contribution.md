@@ -146,10 +146,8 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
       "description": "", // 插件的简要描述
       "icon": "",
       "extestion": ""
-    }
-  },
-  "contributes": {
-    "configuration": {
+    },
+    "configuration": { // 插件的配置信息
       "type": "object",
       "title": "Push",
       "properties": {

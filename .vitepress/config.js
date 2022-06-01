@@ -1,4 +1,5 @@
-const version = "1.0.3";
+const version = "1.0.3",
+  resourceUrl = "https://packages.eoapi.io";
 module.exports = {
   lang: "zh-Hans",
   locales: {
@@ -55,17 +56,17 @@ module.exports = {
             items: [
               {
                 text: "Windows",
-                link: `https://github.com/eolinker/eoapi/releases/latest/download/eoapi-Setup-${version}.exe`,
+                link: `${resourceUrl}/eoapi-Setup-${version}.exe`,
                 target: "_self"
               },
               {
                 text: "MacOS(Intel)",
-                link: `https://github.com/eolinker/eoapi/releases/latest/download/eoapi-${version}.dmg`,
+                link: `${resourceUrl}/eoapi-${version}.dmg`,
                 target: "_self"
               },
               {
                 text: "MacOS(M1)",
-                link: `https://github.com/eolinker/eoapi/releases/latest/download/eoapi-${version}-arm64.dmg`,
+                link: `${resourceUrl}/eoapi-${version}-arm64.dmg`,
                 target: "_self"
               }
             ]
