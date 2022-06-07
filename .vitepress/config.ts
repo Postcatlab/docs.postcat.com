@@ -1,7 +1,7 @@
-const version = "1.0.3",
+const version = "latest",
   resourceUrl = "https://packages.eoapi.io";
 // const WindiCSS = require("vite-plugin-windicss");
-import WindiCSS from "vite-plugin-windicss";
+// import WindiCSS from "vite-plugin-windicss";
 
 export default {
   lang: "zh-Hans",
@@ -165,6 +165,6 @@ export default {
   },
   srcExclude: ["README.md"],
   vite: {
-    plugins: [WindiCSS()]
+    // plugins: [WindiCSS()]
   }
 };
