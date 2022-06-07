@@ -1,6 +1,47 @@
 <template>
-  <h1 class="title">Eoapi</h1>
-  <p class="desc">一个可拓展的开源 API 工具</p>
+  <div class="f_row_ac container_0">
+    <div class="container_0_left f_shrink_0 f_column">
+      <h1 class="title">一个可拓展的<br />开源 API 工具</h1>
+      <div>
+        <div>
+          <button type="button" class="item_download">下载</button>
+          <button type="button">
+            <i class="iconfont icon-chevron-down"></i>
+          </button>
+        </div>
+        <ul>
+          <li v-for="item in resourceInfo" :key="item.id">
+            <a :href="item.link" class="item-icon-show">
+              {{ item.name }}
+            </a>
+          </li>
+        </ul>
+        <a class="eo_link">Live Demo，体验一下</a>
+      </div>
+    </div>
+    <img data-zoomable src="/images/eoapi-demo.jpg" />
+  </div>
+  <div class="f_row_ac container_1">
+    <div>
+      <h2>开源</h2>
+    </div>
+    <div>
+      <h2>API 设计</h2>
+    </div>
+    <div>
+      <h2>API 调试</h2>
+    </div>
+    <div>
+      <h2>插件广场</h2>
+    </div>
+  </div>
+  <div class="container_2">
+    <div>
+    <img data-zoomable src="/images/api-design.png" />
+    </div>
+  </div>
+  <div class="container_3">
+  </div>
   <div class="download-links-list f_row f_jc_ac">
     <div
       v-for="item in resourceInfo"
@@ -14,7 +55,6 @@
       <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
-  <img data-zoomable src="../public/images/eoapi-demo.jpg" />
 </template>
 
 <script>
@@ -96,17 +136,55 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .title {
-  text-align: center;
-  font-size: 60px;
+  font-size: 30px;
+}
+
+.eo_theme_btn_success {
+  border-radius: 3px 0 0 3px;
+  min-width: 70px;
+  word-wrap: none;
+  border: 0 none;
+  background-color: #00785a;
+  color: #fff;
 }
 
 .f_row {
   display: flex;
 }
 
+.container_0 {
+  margin-top: 80px;
+}
+
+.f_row_ac {
+  display: flex;
+  align-items: center;
+}
+
+.f_shrink_0 {
+  flex-shrink: 0;
+}
+
+.container_0_left {
+  margin-right: 60px;
+}
+
+.f_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fs12 {
+  font-size: 12px;
+}
+
 .desc {
   text-align: center;
   font-size: 20px;
+}
+
+.eo_link {
+  color: #0098ff;
 }
 
 .download-links-list {
@@ -125,7 +203,7 @@ export default {
   margin-right: 48px;
 }
 
-.download-links-list .download-links-card-item:hover .item-icon-show .iconfont {
+.download-links-list .download-links-list .download-links-card-item:hover .item-icon-show .iconfont {
   display: none;
 }
 

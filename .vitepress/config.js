@@ -16,6 +16,7 @@ module.exports = {
   },
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "stylesheet", href: "https://at.alicdn.com/t/font_3228727_b5pdqr2cnp4.css?spm=a313x.7781069.1998910419.73&file=font_3228727_b5pdqr2cnp4.css" }],
     ["script", { src: "/lib/medium-zoom.js" }],
     ["script", { src: "/zoom-image.js" }],
     [

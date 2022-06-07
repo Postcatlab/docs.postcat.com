@@ -9,7 +9,7 @@ Eoapi 是一款开源 API 工具，它轻量，同时可拓展。
 
 - 访问 [Releases](https://github.com/eolinker/eoapi/releases) 下载 Windows、macOS 安装包。
 
-![](../public/images/eoapi-demo.jpg)
+![](/images/eoapi-demo.jpg)
 
 Eoapi 全称是 Easy & Open API，我们希望通过工具让 API 管理更简单、更开放。
 
