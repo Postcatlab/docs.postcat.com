@@ -58,7 +58,7 @@
 </template>
 
 <script>
-let version = "1.0.2",
+let version = "latest",
   resourceUrl = "https://packages.eoapi.io";
 export default {
   name: "home",
