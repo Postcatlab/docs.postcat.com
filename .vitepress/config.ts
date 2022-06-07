@@ -1,6 +1,8 @@
 const version = "1.0.3",
   resourceUrl = "https://packages.eoapi.io";
-module.exports = {
+import WindiCSS from "vite-plugin-windicss";
+
+export default {
   lang: "zh-Hans",
   locales: {
     "/": {
@@ -161,5 +163,8 @@ module.exports = {
     logo: "/images/logo.svg",
     editLinks: true
   },
-  srcExclude: ["README.md"]
+  srcExclude: ["README.md"],
+  vite: {
+    plugins: [WindiCSS()]
+  }
 };
