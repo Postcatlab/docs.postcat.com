@@ -113,20 +113,29 @@
 
 <script>
 import { packages } from "../global.model";
-import { getOS } from "../global";
-let os = getOS();
-let currentResource =
-  packages.find((item) => item.text.includes(os)) || packages[0];
 export default {
   name: "home",
   data() {
     return {
       resourceInfo: packages,
-      currentResource: currentResource,
+      currentResource:packages[0],
     };
   },
-  methods: {},
-  mounted() {},
+  methods: {
+    getOS() {
+      if (!window) return;
+      var OSName = "Unknown";
+      if (window.navigator.userAgent.includes("Windows")) OSName = "Windows";
+      if (window.navigator.userAgent.includes("Mac")) OSName = "Mac";
+      if (window.navigator.userAgent.includes("X11")) OSName = "UNIX";
+      if (window.navigator.userAgent.includes("Linux")) OSName = "Linux";
+      return OSName;
+    },
+  },
+  mounted() {
+    this.os = this.getOS();
+    this.currentResource=packages.find((item) => item.text.includes(this.os)) || packages[0]
+  },
 };
 </script>
 <style lang="stylus" scoped>
@@ -343,7 +352,7 @@ export default {
     }
   }
 
-@media screen and (max-width: 750px) {
+  @media screen and (max-width: 750px) {
     .container_0 {
       width: fit-content;
     }
