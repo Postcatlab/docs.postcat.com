@@ -118,7 +118,7 @@ export default {
   data() {
     return {
       resourceInfo: packages,
-      currentResource:packages[0],
+      currentResource: packages[0],
     };
   },
   methods: {
@@ -134,7 +134,8 @@ export default {
   },
   mounted() {
     this.os = this.getOS();
-    this.currentResource=packages.find((item) => item.text.includes(this.os)) || packages[0]
+    this.currentResource =
+      packages.find((item) => item.text.includes(this.os)) || packages[0];
   },
 };
 </script>
@@ -351,14 +352,45 @@ export default {
       display: none;
     }
   }
+}
 
-  @media screen and (max-width: 750px) {
-    .container_0 {
-      width: fit-content;
-    }
+@media screen and (max-width: 750px) {
+  .container_0 {
+    width: fit-content;
+  }
 
-    .image_demo_container, .container_0_btn_box {
-      display: none;
+  .image_demo_container, .container_0_btn_box {
+    display: none;
+  }
+
+  .card_wrap {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .container_0 .container_0_left {
+    margin-right: 0;
+  }
+
+  .container_2 {
+    .function_container {
+      flex-wrap: nowrap;
+      width: 100vw;
+      margin: 0;
+      padding: 10px;
+
+      img {
+        width: 50%;
+        margin-right: 10%;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
     }
   }
 }
