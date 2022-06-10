@@ -342,15 +342,15 @@ export default {
       display: none;
     }
   }
+}
 
 @media screen and (max-width: 750px) {
-    .container_0 {
-      width: fit-content;
-    }
+  .container_0 {
+    width: fit-content;
+  }
 
-    .image_demo_container, .container_0_btn_box {
-      display: none;
-    }
+  .image_demo_container, .container_0_btn_box {
+    display: none;
   }
 }
 </style>
