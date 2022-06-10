@@ -67,7 +67,7 @@
   <div class="container_2">
     <div class="function_container">
       <img src="/images/api-test.png" />
-      <div>
+      <div class="text_container">
         <h2>轻松 API 调试</h2>
         <p>纯 UI 操作，仅需一次点击即可获取清晰完整的 API 测试信息。</p>
         <p>无需安装任何插件，支持对 API 本地/在线调试。</p>
@@ -75,7 +75,7 @@
       </div>
     </div>
     <div class="function_container">
-      <div>
+      <div class="text_container">
         <h2>友好的 API 文档</h2>
         <p>请放弃丑陋且格式不统一的 API 文档</p>
         <p>支持规范化的文档、提供友好的阅读界面以及清晰的分类</p>
@@ -85,7 +85,7 @@
     </div>
     <div class="function_container">
       <img src="/images/extension-market.png" />
-      <div>
+      <div class="text_container">>
         <h2>插件广场</h2>
         <p>将功能选择权交到你的手中，组装出最适合自己的 API 工具</p>
         <p>支持安装导入 Swagger 等格式的 API</p>
@@ -381,7 +381,9 @@ export default {
 
       img {
         width: 50%;
-        margin-right: 10%;
+      }
+      .text_container{
+        width:40%;
       }
 
       h2 {
