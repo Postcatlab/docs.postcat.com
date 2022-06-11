@@ -1,4 +1,5 @@
 import { packages } from "../global.model";
+// import WindiCSS from "vite-plugin-windicss";
 export default {
   lang: "zh-Hans",
   locales: {
@@ -134,7 +135,14 @@ export default {
     editLinks: true,
   },
   srcExclude: ["README.md"],
-  vite: {
-    // plugins: [WindiCSS()]
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag === 'iconpark-icon'
+      }
+    }
   },
+  // vite: {
+  //   plugins: [WindiCSS()]
+  // },
 };

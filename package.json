@@ -11,8 +11,9 @@
   },
   "devDependencies": {
     "stylus": "^0.56.0",
-    "vite-plugin-windicss": "^1.8.4",
     "vitepress": "^0.22.2",
+    "vite-plugin-windicss": "^1.8.4",
     "windicss": "^3.5.4"
-  }
+  },
+  "dependencies": {}
 }

@@ -96,8 +96,8 @@
         class="download-links-card-item"
       >
         <a :href="item.link" class="item-icon-show">
-          <iconpark-icon :name="item.icon"></iconpark-icon>
-          <iconpark-icon class="icon-download" name="download"></iconpark-icon>
+          <!-- <iconpark-icon :name="item.icon"></iconpark-icon> -->
+          <!-- <iconpark-icon class="icon-download" name="download"></iconpark-icon> -->
         </a>
         <span class="item-text-show">{{ item.text }}</span>
       </div>
@@ -298,6 +298,7 @@ export default {
 .container_2 {
   margin: 0 auto;
   width: fit-content;
+
   .function_container {
     display: flex;
     align-items: center;
