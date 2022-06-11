@@ -11,14 +11,14 @@ export let packages = [
   {
     id: "mac",
     text: "MacOS(Intel)",
-    icon: "mac",
+    icon: "apple",
     link: `${resourceUrl}/eoapi-${version}.dmg`,
     target: "_self",
   },
   {
     id: "mac",
     text: "MacOS(M1)",
-    icon: "mac",
+    icon: "apple",
     link: `${resourceUrl}/eoapi-${version}-arm64.dmg`,
     target: "_self",
   },

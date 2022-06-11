@@ -46,22 +46,16 @@
   </div>
   <div class="f_row_ac container_1">
     <div class="card_wrap">
-      <div class="card_item">
-        <span class="iconfont icon-windows"></span>
-        <text>开源</text>
-      </div>
-      <div class="card_item">
-        <span class="iconfont icon-windows"></span>
-        <text>API 文档</text>
-      </div>
-      <div class="card_item">
-        <span class="iconfont icon-windows"></span>
-        <text>API 调试</text>
-      </div>
-      <div class="card_item">
-        <span class="iconfont icon-windows"></span>
-        <text>插件广场</text>
-      </div>
+      <a
+        class="card_item"
+        v-for="item in attributes"
+        :key="item.$index"
+        :href="item.href"
+        target="_blank"
+      >
+        <iconpark-icon :name="item.icon"></iconpark-icon>
+        <text>{{ item.name }}</text>
+      </a>
     </div>
   </div>
   <div class="container_2">
@@ -85,7 +79,7 @@
     </div>
     <div class="function_container">
       <img src="/images/extension-market.png" />
-      <div class="text_container">>
+      <div class="text_container">
         <h2>插件广场</h2>
         <p>将功能选择权交到你的手中，组装出最适合自己的 API 工具</p>
         <p>支持安装导入 Swagger 等格式的 API</p>
@@ -102,8 +96,8 @@
         class="download-links-card-item"
       >
         <a :href="item.link" class="item-icon-show">
-          <i class="iconfont" :class="`icon-${item.icon}`"></i>
-          <i class="iconfont icon-download"></i>
+          <iconpark-icon :name="item.icon"></iconpark-icon>
+          <iconpark-icon class="icon-download" name="download"></iconpark-icon>
         </a>
         <span class="item-text-show">{{ item.text }}</span>
       </div>
@@ -119,6 +113,28 @@ export default {
     return {
       resourceInfo: packages,
       currentResource: packages[0],
+      attributes: [
+        {
+          name: "开源",
+          icon: "github-one",
+          href: "https://github.com/eolinker/eoapi",
+        },
+        {
+          name: "API 文档",
+          icon: "doc-detail",
+          href: "/docs/apidoc.html",
+        },
+        {
+          name: "API 调试",
+          icon: "rectangular-circular-connection",
+          href: "/docs/apitest.html",
+        },
+        {
+          name: "插件广场",
+          icon: "system",
+          href: "/docs/extensions.html",
+        },
+      ],
     };
   },
   methods: {
@@ -252,7 +268,6 @@ export default {
   .card_wrap {
     color: #15785a;
     display: flex;
-    width: 1000px;
     margin: 0 auto;
     justify-content: space-between;
   }
@@ -260,11 +275,17 @@ export default {
   .card_item {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 3rem 0;
+    width: calc(0.15 * 100vw);
     text-align: center;
 
-    .iconfont {
+    &:hover {
+      background-color: #a2bfbe;
+    }
+
+    iconpark-icon {
       font-size: 60px;
+      margin-bottom: 15px;
     }
 
     text {
@@ -277,10 +298,6 @@ export default {
 .container_2 {
   margin: 0 auto;
   width: fit-content;
-
-  // .function_container:nth-child(2n) {
-  // background-color: #f8f8f8;
-  // }
   .function_container {
     display: flex;
     align-items: center;
@@ -319,11 +336,11 @@ export default {
       margin-right: 48px;
     }
 
-    .download-links-card-item:hover .item-icon-show .iconfont {
+    .download-links-card-item:hover .item-icon-show iconpark-icon {
       display: none;
     }
 
-    .download-links-card-item:hover .item-icon-show .iconfont.icon-download {
+    .download-links-card-item:hover .item-icon-show iconpark-icon.icon-download {
       animation: scale-out 0.5s;
       animation-fill-mode: forwards;
       display: block;
@@ -343,7 +360,7 @@ export default {
       color: #51565d;
     }
 
-    .download-links-card-item .item-icon-show .iconfont {
+    .download-links-card-item .item-icon-show iconpark-icon {
       font-size: 48px;
       color: #018e59;
     }
@@ -363,9 +380,15 @@ export default {
     display: none;
   }
 
-  .card_wrap {
-    width: 100%;
-    flex-wrap: wrap;
+  .container_1 {
+    .card_wrap {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .card_item {
+      width: calc(0.5 * 100vw);
+    }
   }
 
   .container_0 .container_0_left {
@@ -377,13 +400,14 @@ export default {
       flex-wrap: nowrap;
       width: 100vw;
       margin: 0;
-      padding: 10px;
+      padding: 20px;
 
       img {
         width: 50%;
       }
-      .text_container{
-        width:40%;
+
+      .text_container {
+        width: 40%;
       }
 
       h2 {

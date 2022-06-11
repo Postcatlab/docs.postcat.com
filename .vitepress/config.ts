@@ -16,10 +16,9 @@ export default {
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     [
-      "link",
+      "script",
       {
-        rel: "stylesheet",
-        href: "https://at.alicdn.com/t/font_3228727_b5pdqr2cnp4.css?spm=a313x.7781069.1998910419.73&file=font_3228727_b5pdqr2cnp4.css",
+        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_8.77d037dcad79d29e9a4103786926b55a.js",
       },
     ],
     ["script", { src: "/lib/medium-zoom.js" }],
@@ -120,7 +119,7 @@ export default {
           {
             text: "Download",
             ariaLabel: "Download",
-            items:packages,
+            items: packages,
           },
         ],
         sidebar: {
