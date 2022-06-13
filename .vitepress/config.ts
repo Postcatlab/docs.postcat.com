@@ -19,7 +19,7 @@ export default {
     [
       "script",
       {
-        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_8.77d037dcad79d29e9a4103786926b55a.js",
+        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js",
       },
     ],
     ["script", { src: "/lib/medium-zoom.js" }],

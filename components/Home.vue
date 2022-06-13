@@ -14,7 +14,7 @@
               type="button"
               class="eo_btn download_btn download_btn_right"
             >
-              <i class="iconfont icon-chevron-down"></i>
+              <iconpark-icon name="down"></iconpark-icon>
             </button>
             <div class="btn_group_list_container">
               <ul class="btn_group_list">
@@ -232,6 +232,7 @@ export default {
   .download_btn_right {
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0 3px 3px 0;
+    line-height: 40px;
   }
 
   .btn_group_list_container {
