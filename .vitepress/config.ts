@@ -6,21 +6,21 @@ export default {
     "/": {
       lang: "zh-CN",
       title: "Eoapi",
-      description: "一个可拓展的开源 API 工具",
+      description: "一个可拓展的开源 API 工具"
     },
     "/en/": {
       lang: "en-US", // 将会被设置为 <html> 的 lang 属性
       title: "Eoapi",
-      description: "An extensible open source API tool",
-    },
+      description: "An extensible open source API tool"
+    }
   },
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     [
       "script",
       {
-        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js",
-      },
+        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_8.77d037dcad79d29e9a4103786926b55a.js"
+      }
     ],
     ["script", { src: "/lib/medium-zoom.js" }],
     ["script", { src: "/zoom-image.js" }],
@@ -34,15 +34,15 @@ export default {
   
   //custom page code end here
   
-  gio('send');`,
-    ],
+  gio('send');`
+    ]
   ],
   lastUpdated: true,
   themeConfig: {
     algolia: {
       appId: "DWNA8Q7OW9",
       apiKey: "74082b5eb9ea2c675445503c70f6b4e2",
-      indexName: "eoapi",
+      indexName: "eoapi"
     },
     locales: {
       "/": {
@@ -59,8 +59,8 @@ export default {
           {
             text: "下载",
             ariaLabel: "Download",
-            items: packages,
-          },
+            items: packages
+          }
         ],
         sidebar: {
           "/docs/": [
@@ -73,24 +73,25 @@ export default {
                   children: [
                     { text: "接口测试", link: "/docs/apitest" },
                     { text: "接口文档", link: "/docs/apidoc" },
-                    { text: "测试环境", link: "/docs/env" },
-                  ],
+                    { text: "测试环境", link: "/docs/env" }
+                  ]
                 },
                 {
                   text: "插件广场",
                   link: "/docs/extensions",
                   children: [
-                    { text: "推送", link: "/docs/extension-push" },
+                    { text: "导入", link: "/docs/extension-import" },
                     { text: "导出", link: "/docs/extension-export" },
-                  ],
+                    { text: "推送", link: "/docs/extension-push" }
+                  ]
                 },
-                { text: "常见问题", link: "/docs/FAQ" },
-              ],
+                { text: "常见问题", link: "/docs/FAQ" }
+              ]
             },
             {
               text: "联系我们",
-              link: "/docs/contact",
-            },
+              link: "/docs/contact"
+            }
           ],
           "/api/": [
             {
@@ -98,15 +99,15 @@ export default {
               link: "/api/overview",
               children: [
                 { text: "快速开始", link: "/api/get-started" },
-                { text: "可贡献功能点", link: "/api/feature-contribution" },
-              ],
-            },
+                { text: "可贡献功能点", link: "/api/feature-contribution" }
+              ]
+            }
             // {
             //   text: "API",
             //   children: [{ text: "模块开发指南", link: "/api/module" }],
             // },
-          ],
-        },
+          ]
+        }
       },
       "/en/": {
         selectText: "Languages",
@@ -120,28 +121,28 @@ export default {
           {
             text: "Download",
             ariaLabel: "Download",
-            items: packages,
-          },
+            items: packages
+          }
         ],
         sidebar: {
-          "/en/docs/": [],
-        },
-      },
+          "/en/docs/": []
+        }
+      }
     },
     docsRepo: "eolinker/eoapi-docs",
     docsBranch: "main",
     repo: "eolinker/eoapi",
     logo: "/images/logo.svg",
-    editLinks: true,
+    editLinks: true
   },
   srcExclude: ["README.md"],
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => tag === 'iconpark-icon'
+        isCustomElement: (tag) => tag === "iconpark-icon"
       }
     }
-  },
+  }
   // vite: {
   //   plugins: [WindiCSS()]
   // },
