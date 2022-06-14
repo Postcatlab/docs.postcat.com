@@ -19,7 +19,7 @@ export default {
     [
       "script",
       {
-        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_8.77d037dcad79d29e9a4103786926b55a.js"
+        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js"
       }
     ],
     ["script", { src: "/lib/medium-zoom.js" }],
@@ -80,9 +80,8 @@ export default {
                   text: "插件广场",
                   link: "/docs/extensions",
                   children: [
-                    { text: "导入", link: "/docs/extension-import" },
-                    { text: "导出", link: "/docs/extension-export" },
-                    { text: "推送", link: "/docs/extension-push" }
+                    { text: "推送", link: "/docs/extension-push" },
+                    { text: "导出", link: "/docs/extension-export" }
                   ]
                 },
                 { text: "常见问题", link: "/docs/FAQ" }
