@@ -72,3 +72,6 @@ $ yarn build
 构建成功后，会在`/.vitepress`下创建名为 `dist/`的文件夹，其中内容即是构建后的静态资源，如果需要在本地预览，可以运行`yarn serve`命令，在本地临时启动一个静态资源服务器，即可预览构建后的最终效果。
 
 也可以将`dist/`中的内容放置到正式服务器上浏览。
+
+### 图标库
+https://iconpark.oceanengine.com/official

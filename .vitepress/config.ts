@@ -1,4 +1,6 @@
-module.exports = {
+import { packages } from "../global.model";
+// import WindiCSS from "vite-plugin-windicss";
+export default {
   lang: "zh-Hans",
   locales: {
     "/": {
@@ -14,8 +16,26 @@ module.exports = {
   },
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
+    [
+      "script",
+      {
+        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js",
+      },
+    ],
     ["script", { src: "/lib/medium-zoom.js" }],
     ["script", { src: "/zoom-image.js" }],
+    [
+      "script",
+      {},
+      `!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.1/gio.js","gio");
+    gio('init','bd7645ddc19400a8', {});
+  
+  //custom page code begin here
+  
+  //custom page code end here
+  
+  gio('send');`,
+    ],
   ],
   lastUpdated: true,
   themeConfig: {
@@ -33,25 +53,14 @@ module.exports = {
         nav: [
           { text: "首页", link: "/index" },
           { text: "文档", link: "/docs/about" },
-          // { text: "API", link: "/api/module" },
+          { text: "API", link: "/api/overview" },
+          { text: "Live Demo", link: "https://demo.eoapi.io/" },
+          { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
             text: "下载",
             ariaLabel: "Download",
-            items: [
-              {
-                text: "MacOS",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
-                target: "_self",
-              },
-              {
-                text: "Windows",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
-                target: "_self",
-              },
-            ],
+            items: packages,
           },
-          { text: "Live Demo", link: "https://demo.eoapi.io/" },
-          { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
         sidebar: {
           "/docs/": [
@@ -59,12 +68,21 @@ module.exports = {
               text: "产品手册",
               children: [
                 { text: "产品简介", link: "/docs/about" },
-                { text: "接口测试", link: "/docs/apitest" },
-                { text: "接口文档", link: "/docs/apidoc" },
-                { text: "测试环境", link: "/docs/env" },
+                {
+                  text: "基础功能",
+                  children: [
+                    { text: "接口测试", link: "/docs/apitest" },
+                    { text: "接口文档", link: "/docs/apidoc" },
+                    { text: "测试环境", link: "/docs/env" },
+                  ],
+                },
                 {
                   text: "插件广场",
                   link: "/docs/extensions",
+                  children: [
+                    { text: "推送", link: "/docs/extension-push" },
+                    { text: "导出", link: "/docs/extension-export" },
+                  ],
                 },
                 {
                   text: "数据源",
@@ -80,9 +98,17 @@ module.exports = {
           ],
           "/api/": [
             {
-              text: "API",
-              children: [{ text: "模块开发指南", link: "/api/module" }],
+              text: "插件",
+              link: "/api/overview",
+              children: [
+                { text: "快速开始", link: "/api/get-started" },
+                { text: "可贡献功能点", link: "/api/feature-contribution" },
+              ],
             },
+            // {
+            //   text: "API",
+            //   children: [{ text: "模块开发指南", link: "/api/module" }],
+            // },
           ],
         },
       },
@@ -93,24 +119,13 @@ module.exports = {
         nav: [
           { text: "Home", link: "/en/index" },
           { text: "Document", link: "/en/docs/about" },
+          { text: "Live Demo", link: "https://demo.eoapi.io/" },
+          { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
             text: "Download",
             ariaLabel: "Download",
-            items: [
-              {
-                text: "MacOS",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-0.0.1-beta.dmg",
-                target: "_self",
-              },
-              {
-                text: "Windows",
-                link: "https://github.com/eolinker/eoapi/releases/download/v0.0.1-beta/eoapi-Setup-0.0.1-beta.exe",
-                target: "_self",
-              },
-            ],
+            items: packages,
           },
-          { text: "Live Demo", link: "https://demo.eoapi.io/" },
-          { text: "Github", link: "https://github.com/eolinker/eoapi" },
         ],
         sidebar: {
           "/en/docs/": [],
@@ -124,4 +139,14 @@ module.exports = {
     editLinks: true,
   },
   srcExclude: ["README.md"],
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag === 'iconpark-icon'
+      }
+    }
+  },
+  // vite: {
+  //   plugins: [WindiCSS()]
+  // },
 };

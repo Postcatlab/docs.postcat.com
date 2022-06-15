@@ -14,7 +14,7 @@
       <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
-  <img data-zoomable src="../../public/images/eoapi-demo.jpg" />
+  <img data-zoomable src="/images/eoapi-demo.jpg" />
 </template>
 
 <script>
@@ -33,29 +33,56 @@ export default {
         },
         {
           id: "mac",
-          name: "macOS",
+          name: "macOS(Intel)",
           icon: "mac",
           suffix: "dmg",
           link: "",
         },
+        {
+          id: "mac",
+          name: "macOS(M1)",
+          icon: "mac",
+          suffix: "arm64.dmg",
+          link: "",
+        }
       ],
     };
   },
   methods: {
+    findLinkInSingleAssets(assets, item) {
+      let result = "";
+      let assetIndex = assets.findIndex(
+        (asset) =>
+          new RegExp(`${item.suffix}$`, "g").test(asset.browser_download_url) &&
+          (!item.keyword || asset.browser_download_url.includes(item.keyword))
+      );
+      if (assetIndex === -1) {
+        return result;
+      }
+      result = assets[assetIndex].browser_download_url;
+      assets.splice(assetIndex, 1);
+      return result;
+    },
+    findLink(allAssets, item) {
+      let result = "";
+      allAssets.some((assets) => {
+        result = this.findLinkInSingleAssets(assets, item);
+        return result;
+      });
+      return result;
+    },
     getDownloadResource() {
       fetch("https://api.github.com/repos/eolinker/eoapi/releases")
         .then((response) => response.json())
         .then((data) => {
-          this.resourceInfo.forEach((item) => {
-            let assetItem = data[0].assets.find(
-              (asset) =>
-                asset.browser_download_url.slice(-item.suffix.length) ===
-                  item.suffix &&
-                (!item.keyword ||
-                  asset.browser_download_url.includes(item.keyword))
-            );
-            item.link = assetItem.browser_download_url;
-          });
+          [...this.resourceInfo]
+            .sort((a1, a2) => a2.suffix.length - a1.suffix.length)
+            .forEach((item) => {
+              item.link = this.findLink(
+                data.map((val) => val.assets),
+                item
+              );
+            });
           // console.log(this.resourceInfo);
         });
     },
@@ -77,7 +104,7 @@ export default {
 
 .desc {
   text-align: center;
-  font-size:20px;
+  font-size: 20px;
 }
 
 .download-links-list {
