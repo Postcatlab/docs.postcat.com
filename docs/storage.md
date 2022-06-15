@@ -19,13 +19,13 @@ create DATABASE eoapi;
 
 ### 服务部署
 
-在服务器 Clone 仓库
+1. 在服务器 Clone 仓库
 
 ```
 git clone https://github.com/eolinker/eoapi-remote-server
 ```
 
-按照 README 部署好后，配置 ormconfig.json 文件
+2. 按照 README 部署好后，配置 ormconfig.json 文件
 ```
 {
   "type": "mysql",
@@ -44,7 +44,7 @@ git clone https://github.com/eolinker/eoapi-remote-server
   }
 }
 ```
-2. 配置 .env
+3. 配置 .env
 访问远程服务需要加 token 鉴权，格式为 `API_KEY=xxx`
 ```
 API_KEY=1ab2c3d4e5f61ab2c3d4e5f6

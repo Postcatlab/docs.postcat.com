@@ -63,16 +63,16 @@
       <img src="/images/api-test.png" />
       <div class="text_container">
         <h2>轻松 API 调试</h2>
-        <p>纯 UI 操作，仅需一次点击即可获取清晰完整的 API 测试信息。</p>
-        <p>无需安装任何插件，支持对 API 本地/在线调试。</p>
-        <p>记录所有 API 的测试历史，一键回溯测试。</p>
+        <p>参数自动补全，一键获取清晰的 API 测试信息</p>
+        <p>无需安装任何插件，支持对 API 本地/在线调试</p>
+        <p>记录所有 API 的测试历史，一键回溯测试</p>
       </div>
     </div>
     <div class="function_container">
       <div class="text_container">
         <h2>友好的 API 文档</h2>
         <p>请放弃丑陋且格式不统一的 API 文档</p>
-        <p>支持规范化的文档、提供友好的阅读界面以及清晰的分类</p>
+        <p>Eoapi 支持规范化的文档，提供友好的阅读界面</p>
         <p>还可以通过文档自动生成 Mock，协作无烦恼</p>
       </div>
       <img src="/images/api-design.png" />
@@ -81,10 +81,10 @@
       <img src="/images/extension-market.png" />
       <div class="text_container">
         <h2>插件广场</h2>
-        <p>将功能选择权交到你的手中，组装出最适合自己的 API 工具</p>
-        <p>支持安装导入 Swagger 等格式的 API</p>
-        <p>还可以一键同步到其他平台等插件。</p>
-        <p>特定需求无法满足？还可以自己动手，保证提供流畅的开发体验</p>
+        <p>功能自己选择，组装出最适合的 API 工具</p>
+        <p>支持安装导入、导出各个格式的 API</p>
+        <p>还可以将 API 数据同步到各个平台</p>
+        <p>特定需求无法满足？自己动手吧，保证提供流畅的开发体验</p>
       </div>
     </div>
   </div>
