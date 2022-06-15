@@ -84,6 +84,10 @@ export default {
                     { text: "导出", link: "/docs/extension-export" },
                   ],
                 },
+                {
+                  text: "内网部署",
+                  link: "/docs/storage",
+                },
                 { text: "常见问题", link: "/docs/FAQ" },
               ],
             },
