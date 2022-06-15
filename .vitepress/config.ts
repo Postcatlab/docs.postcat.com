@@ -85,7 +85,7 @@ export default {
                   ],
                 },
                 {
-                  text: "数据源",
+                  text: "内网部署",
                   link: "/docs/storage",
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
