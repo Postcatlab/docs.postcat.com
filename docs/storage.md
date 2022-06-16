@@ -59,9 +59,10 @@ npm start
 ![](../assets/images/2022-06-15-19-00-12.png)
 
 ### 服务升级
-如果数据库脚本有更新（添加字段、表），需要运行迁移脚本
+关闭服务后，运行迁移脚本，再重启服务即可。
 ```
 npm run migration:run
 ```
-
-文档可以看：https://typeorm.bootcss.com/migrations
+## 客户端配置
+点击配置，填入服务器地址、Token 后即可远程协作即可使用远程数据源。
+![](../assets/images/2022-06-16-12-22-11.png)
