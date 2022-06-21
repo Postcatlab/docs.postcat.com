@@ -1,11 +1,11 @@
-const version = "1.1.1",
+const version = "1.2.0",
   resourceUrl = "https://github.com/eolinker/eoapi/releases/latest/download";
 export let packages = [
   {
     id: "win",
     text: "Windows",
     icon: "windows",
-    link: `${resourceUrl}/eoapi-Setup-${version}.exe`,
+    link: `${resourceUrl}/eoapi.Setup.${version}.exe`,
     target: "_self",
   },
   {
