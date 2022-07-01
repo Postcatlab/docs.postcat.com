@@ -74,6 +74,7 @@ export default {
                     { text: "接口测试", link: "/docs/apitest" },
                     { text: "接口文档", link: "/docs/apidoc" },
                     { text: "测试环境", link: "/docs/env" },
+                    { text: "Mock 数据", link: "/docs/mock" },
                   ],
                 },
                 {
@@ -142,9 +143,9 @@ export default {
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => tag === 'iconpark-icon'
-      }
-    }
+        isCustomElement: (tag) => tag === "iconpark-icon",
+      },
+    },
   },
   // vite: {
   //   plugins: [WindiCSS()]
