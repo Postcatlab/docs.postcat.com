@@ -26,6 +26,7 @@ git clone https://github.com/eolinker/eoapi-remote-server
 ```
 
 2. 按照 README 部署好后，配置 ormconfig.json 文件
+
 ```
 {
   "type": "mysql",
@@ -44,25 +45,41 @@ git clone https://github.com/eolinker/eoapi-remote-server
   }
 }
 ```
+
 3. 配置 .env
-访问远程服务需要加 token 鉴权，格式为 `API_KEY=xxx`
+   访问远程服务需要加 token 鉴权，格式为 `API_KEY=xxx`
+
 ```
 API_KEY=1ab2c3d4e5f61ab2c3d4e5f6
 ```
+
 ![](../assets/images/2022-06-15-18-59-37.png)
 
 3. 启动服务
+   首次启动需要安装依赖
+
+```
+npm install
+```
+
+启动项目
+
 ```
 npm start
 ```
+
 如图，项目启动成功
 ![](../assets/images/2022-06-15-19-00-12.png)
 
 ### 服务升级
+
 关闭服务后，运行迁移脚本，再重启服务即可。
+
 ```
 npm run migration:run
 ```
+
 ## 客户端配置
+
 点击配置，填入服务器地址、Token 后即可远程协作即可使用远程数据源。
 ![](../assets/images/2022-06-16-12-22-11.png)
