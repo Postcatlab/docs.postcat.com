@@ -71,7 +71,13 @@ export default {
                 {
                   text: "基础功能",
                   children: [
-                    { text: "接口测试", link: "/docs/apitest" },
+                    {
+                      text: "接口测试",
+                      link: "/docs/apitest",
+                      children: [
+                        { text: "前后置脚本", link: "/docs/script-function" },
+                      ],
+                    },
                     { text: "接口文档", link: "/docs/apidoc" },
                     { text: "测试环境", link: "/docs/env" },
                     { text: "Mock 数据", link: "/docs/mock" },
