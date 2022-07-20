@@ -109,7 +109,24 @@ export default {
               link: "/api/overview",
               children: [
                 { text: "快速开始", link: "/api/get-started" },
-                { text: "可贡献功能点", link: "/api/feature-contribution" },
+                {
+                  text: "可贡献功能点",
+                  link: "/api/feature-contribution/index",
+                  children: [
+                    {
+                      text: "导出",
+                      link: "/api/feature-contribution/export",
+                    },
+                    {
+                      text: "推送",
+                      link: "/api/feature-contribution/push",
+                    },
+                    {
+                      text: "国际化",
+                      link: "/api/feature-contribution/i18n",
+                    },
+                  ],
+                },
               ],
             },
             // {
