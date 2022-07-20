@@ -24,7 +24,7 @@ Feature 代表功能级别的插件，除了[必填的配置项](/api/get-starte
 | ---- | ---- | ---- |
 |[导出](/api/feature-contribution/export.html)| apimanage.export | 自定义导出 API 数据 |
 |[推送](/api/feature-contribution/push.html)| apimanage.sync | 将 API 数据推送到其他各个平台 |
-|[国际化](/api/feature-contribution/i18n.html)| i18n | 支持不同语言的插件显示 |
+|[多语言](/api/feature-contribution/i18n.html)| i18n | 支持不同语言的插件显示 |
 
 ## 功能预告
 

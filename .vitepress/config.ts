@@ -122,7 +122,7 @@ export default {
                       link: "/api/feature-contribution/push",
                     },
                     {
-                      text: "国际化",
+                      text: "多语言",
                       link: "/api/feature-contribution/i18n",
                     },
                   ],
