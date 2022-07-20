@@ -23,7 +23,7 @@
 
 环境变量常用于以下场景：
 
-- 通过环境变量改变 API URL 里面的版本路径，比如 api.eoapi.com/ {{version}} user/login
+- 通过环境变量改变 API URL 里面的版本路径，比如 api.eoapi.com/\{{version}}/user/login
 - 改变请求参数的 Key 和 Value，比如表单中有一个参数 version，值是环境变量：{{version}}
 
 ![](../assets/images/2022-04-08-23-45-12.png)
