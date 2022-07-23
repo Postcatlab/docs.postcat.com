@@ -247,17 +247,3 @@ responseHeaders["param_key"];
 
 **示例**
 ![](http://data.eolinker.com/AESvHBC862bc0f18c80ef9c54f5267b340a58e24964fd6a)
-
-##responseHeaders;
-**函数说明**
-获取返回头部内容
-
-**示例**
-![](http://data.eolinker.com/zvjvV3m85f10825d8cf6acb8dcd604e6a02b7fe64dd4206)
-
-##responseHeaders["param_key"];
-**函数说明**
-获取返回头部中的某个参数
-
-**示例**
-![](http://data.eolinker.com/DIq9vxd245a693fa815fa83225629c46d9a40b83e7f4bfd)

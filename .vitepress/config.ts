@@ -76,6 +76,7 @@ export default {
                       link: "/docs/apitest",
                       children: [
                         { text: "前后置脚本", link: "/docs/script-function" },
+                        { text: "全局变量", link: "/docs/global-variable" },
                       ],
                     },
                     { text: "接口文档", link: "/docs/apidoc" },
