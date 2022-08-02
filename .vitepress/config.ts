@@ -102,38 +102,7 @@ export default {
               text: "联系我们",
               link: "/docs/contact",
             },
-          ],
-          "/api/": [
-            {
-              text: "插件",
-              link: "/api/overview",
-              children: [
-                { text: "快速开始", link: "/api/get-started" },
-                {
-                  text: "可贡献功能点",
-                  link: "/api/feature-contribution/index",
-                  children: [
-                    {
-                      text: "导出",
-                      link: "/api/feature-contribution/export",
-                    },
-                    {
-                      text: "推送",
-                      link: "/api/feature-contribution/push",
-                    },
-                    {
-                      text: "多语言",
-                      link: "/api/feature-contribution/i18n",
-                    },
-                  ],
-                },
-              ],
-            },
-            // {
-            //   text: "API",
-            //   children: [{ text: "模块开发指南", link: "/api/module" }],
-            // },
-          ],
+          ]
         },
       },
       "/en/": {
