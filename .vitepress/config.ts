@@ -104,24 +104,25 @@ export default {
           ]
         },
       },
-      "/en/": {
-        selectText: "Languages",
-        label: "English",
-        editLinkText: "Contribute to this document",
-        nav: [
-          { text: "Document", link: "/en/docs/about" },
-          { text: "Live Demo", link: "https://demo.eoapi.io/" },
-          { text: "Github", link: "https://github.com/eolinker/eoapi" },
-          {
-            text: "Download",
-            ariaLabel: "Download",
-            items: packages,
-          },
-        ],
-        sidebar: {
-          "/en/docs/": [],
-        },
-      },
+      
+      // "/en/": {
+      //   selectText: "Languages",
+      //   label: "English",
+      //   editLinkText: "Contribute to this document",
+      //   nav: [
+      //     { text: "Document", link: "/en/docs/about" },
+      //     { text: "Live Demo", link: "https://demo.eoapi.io/" },
+      //     { text: "Github", link: "https://github.com/eolinker/eoapi" },
+      //     {
+      //       text: "Download",
+      //       ariaLabel: "Download",
+      //       items: packages,
+      //     },
+      //   ],
+      //   sidebar: {
+      //     "/en/docs/": [],
+      //   },
+      // },
     },
     docsRepo: "eolinker/eoapi-docs",
     docsBranch: "main",
