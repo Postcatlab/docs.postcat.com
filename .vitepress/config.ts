@@ -53,7 +53,6 @@ export default {
         nav: [
           { text: "首页", link: "/index" },
           { text: "文档", link: "/docs/about" },
-          { text: "API", link: "/api/overview" },
           { text: "Live Demo", link: "https://demo.eoapi.io/" },
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
