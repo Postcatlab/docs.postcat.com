@@ -51,8 +51,7 @@ export default {
         editLinkText: "贡献此文档",
         lastUpdated: "最后更新",
         nav: [
-          { text: "首页", link: "/index" },
-          { text: "文档", link: "/docs/about" },
+          { text: "文档", link: "/",activeMatch:'/' },
           { text: "Live Demo", link: "https://demo.eoapi.io/" },
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
@@ -62,11 +61,11 @@ export default {
           },
         ],
         sidebar: {
-          "/docs/": [
+          "/": [
             {
               text: "产品手册",
               children: [
-                { text: "产品简介", link: "/docs/about" },
+                { text: "产品简介", link: "/index" },
                 {
                   text: "基础功能",
                   children: [
@@ -110,7 +109,6 @@ export default {
         label: "English",
         editLinkText: "Contribute to this document",
         nav: [
-          { text: "Home", link: "/en/index" },
           { text: "Document", link: "/en/docs/about" },
           { text: "Live Demo", link: "https://demo.eoapi.io/" },
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
