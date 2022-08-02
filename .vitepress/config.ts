@@ -5,7 +5,7 @@ export default {
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "Eoapi",
+      title: "用户使用文档 - Eoapi",
       description: "一个可拓展的开源 API 工具",
     },
     "/en/": {
