@@ -5,11 +5,11 @@ Eoapi 是一款开源 API 工具，它轻量，同时可拓展。
 
 除了提供和 API 有关的核心功能，还可以通过插件广场帮助你将 API 发布到各个应用平台，比如发布到网关上完成 API 上线，或者和低代码平台结合，将 API 快速变成低代码平台中可使用的组件等。
 
-- 你可以访问 [Live Demo](https://demo.eoapi.io/) 快速体验产品特性
+- 你可以访问 [Live Demo](https://eoapi.io/) 快速体验产品特性
 
 - 访问 [Releases](https://github.com/eolinker/eoapi/releases) 下载 Windows、macOS 安装包。
 
-![](/images/eoapi-demo.jpg)
+![](/images/eoapi-demo.png)
 
 Eoapi 全称是 Easy & Open API，我们希望通过工具让 API 管理更简单、更开放。
 

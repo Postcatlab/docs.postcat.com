@@ -52,7 +52,7 @@ export default {
         lastUpdated: "最后更新",
         nav: [
           { text: "文档", link: "/",activeMatch:'/' },
-          { text: "Live Demo", link: "https://demo.eoapi.io/" },
+          { text: "Live Demo", link: "https://eoapi.io/" },
           { text: "Github", link: "https://github.com/eolinker/eoapi" },
           {
             text: "下载",
@@ -111,7 +111,7 @@ export default {
       //   editLinkText: "Contribute to this document",
       //   nav: [
       //     { text: "Document", link: "/en/docs/about" },
-      //     { text: "Live Demo", link: "https://demo.eoapi.io/" },
+      //     { text: "Live Demo", link: "https://eoapi.io/" },
       //     { text: "Github", link: "https://github.com/eolinker/eoapi" },
       //     {
       //       text: "Download",

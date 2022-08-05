@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <a class="eo_link" href="https://demo.eoapi.io" target="_blank"
+        <a class="eo_link" href="https://eoapi.io" target="_blank"
           ><button class="eo_btn eo_btn_default" type="button">
             Live Demo
           </button></a
