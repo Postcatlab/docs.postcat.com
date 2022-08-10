@@ -14,7 +14,7 @@
       <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
-  <img data-zoomable src="/images/eoapi-demo.jpg" />
+  <img data-zoomable src="/images/eoapi-demo.png" />
 </template>
 
 <script>
