@@ -7,71 +7,56 @@ Eoapi 提供两套数据源：
 
 ## 服务器部署
 
-### 安装数据库
-
-安装 [MySQL](https://zhuanlan.zhihu.com/p/27960044)
-安装后开启 MySQL，创建一个名为 eoapi 的数据库。
-
-```
-mysql -u root -p
-create DATABASE eoapi;
-```
-
-### 服务部署
-
 1. 在服务器 Clone 仓库
 
 ```
 git clone https://github.com/eolinker/eoapi-remote-server
 ```
 
-2. 按照 README 部署好后，配置 ormconfig.json 文件
+2. 环境变量配置
 
-```
-{
-  "type": "mysql",
-  "host": "localhost",
-  "port": 3306,
-  "username": "root",
-  "password": "xxxxxx",//数据库密码
-  "database": "eoapi",//数据库名称
-  "synchronize": false,
-  "logging": false,
-  "entities": ["dist/entities/**/*.js"],
-  "migrations": ["dist/migrations/**/*.js"],
-  "migrationsRun": true,
-  "cli": {
-    "migrationsDir": "src/migrations"
-  }
-}
-```
+>*如果你没有配置需求，可以跳过此步骤，系统会使用默认配置启动*
 
-3. 配置 .env
-   访问远程服务需要加 token 鉴权，格式为 `API_KEY=xxx`
+在 `.env` 文件中统一配置 TOKEN 以及 MySQL 连接、端口等配置信息。
 
-```
+```bash
+# auth token
 API_KEY=1ab2c3d4e5f61ab2c3d4e5f6
+
+# eoapi-server coinfigure
+EOAPI_SERVER_PORT=3000
+
+# mysql configure
+TZ=Asia/Shanghai
+# 映射到宿主机端口号
+MYSQL_PORT=33066
+MYSQL_USERNAME=root
+MYSQL_DATABASE=eoapi
+MYSQL_PASSWORD=123456a.
+MYSQL_ROOT_PASSWORD=123456a.
 ```
 
-![](../assets/images/2022-06-15-18-59-37.png)
+默认情况下，在 `src/config/ormconfig.ts` 和 `docker-compose.yaml` 文件中统一使用了 `.env` 配置里的环境变量，比如：服务端口号、MySQL 连接等信息。
 
-3. 启动服务
-   首次启动需要安装依赖
+3. 使用 Docker 一键部署
 
-```
-npm install
+启动成功后，通过 <http://localhost:3000> 访问。
+
+```bash
+docker-compose up -d --build
 ```
 
-启动项目
+查看实时日志输出
 
+```bash
+docker-compose logs -f
 ```
-npm start
-```
+
 
 如图，项目启动成功
 ![](../assets/images/2022-06-15-19-00-12.png)
 
-### 服务升级
+## 服务升级
 
 关闭服务后，运行迁移脚本，再重启服务即可。
 
