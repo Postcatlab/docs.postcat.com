@@ -1,4 +1,4 @@
-const version = "1.5.0",
+const version = "1.5.1",
   resourceUrl = "https://github.com/eolinker/eoapi/releases/latest/download";
 export let packages = [
   {
