@@ -6,18 +6,13 @@
 
 ```bash
 .
-├── README.md						# 本文档
-├── index.md						# 首页
-├── components/					# markdown 文档中需要运行的vue组件，例如定制化的首页
-├── .vitepress/					# vitepress配置，构建后的静态资源也在该文件夹下。
-├── assets/						  # 静态资源，主要是放置图片
-├── public/						  # 不需要编译的公共资源，如 favicon.ico
-├── docs/               # 各详细文档
-├── package.json				# 依赖配置
-└── yarn.lock						# 依赖配置
+├── user					# 用户文档
+├── developer			    # 开发者文档
 ```
 
-### 如何开始编辑
+### 如何开始
+
+先进入要编辑的项目
 
 #### 第一步
 
@@ -74,4 +69,5 @@ $ yarn build
 也可以将`dist/`中的内容放置到正式服务器上浏览。
 
 ### 图标库
+
 https://iconpark.oceanengine.com/official

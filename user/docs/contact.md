@@ -15,4 +15,4 @@
 3. <a href="https://segmentfault.com/"><img style="vertical-align: middle;" src="/images/segmentfault.svg" width="140" height="26" class="lg-show" alt="segmentfault"></a>(中文)
 
 ## 实时通讯
-![微信小助手](../assets/images/wechat-card.jpg)
+<img style="vertical-align: middle;" src="/assets/images/wechat-card.jpg" width="300" class="lg-show" alt="微信小助手">

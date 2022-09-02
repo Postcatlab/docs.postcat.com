@@ -1,4 +1,4 @@
-import { packages } from "../global.model";
+import { packages } from "../../global.model";
 // import WindiCSS from "vite-plugin-windicss";
 export default {
   lang: "zh-Hans",
