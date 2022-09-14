@@ -26,7 +26,7 @@ git clone https://github.com/eolinker/eoapi-remote-server
 
 #### 2. 环境变量配置
 
-> _如果你没有配置数据库需求，可以[跳过此步骤](#使用-docker-一键启动)，系统会使用默认配置启动_
+> _如果你没有配置数据库需求，可以[跳过此步骤](#_3-使用-docker-一键启动)，系统会使用默认配置启动_
 
 在 `.env` 文件中统一配置 TOKEN 以及 MySQL 连接、端口等配置信息。
 
@@ -51,7 +51,7 @@ MYSQL_ROOT_PASSWORD=123456a.
 
 #### 3. 使用 Docker 一键启动
 
-启动成功后，通过 <http://localhost:3000> 访问。
+启动成功后，通过 `http://<server_url>:3000` 访问。
 
 ```bash
 docker-compose up -d --build
