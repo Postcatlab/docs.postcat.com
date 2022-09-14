@@ -5,26 +5,25 @@ Eoapi 提供两套数据源：
 - 本地数据源：可单机/离线使用，IndexedDB 数据库
 - 远程数据源：可远程协作，Node.js+MySQL
 
-## 服务器部署
+## 远程数据源部署
 
 目前支持通过 Docker 安装部署应用，无需自己安装数据库 MySQL，一键即可部署成功。
 
-## 服务端安装 Docker
+### 1. 安装 Docker
 
 > Docker 版本需高于 v20.10
 
 - Docker [安装指南](https://www.runoob.com/docker/macos-docker-install.html)
 - 调试可以使用[桌面端下载](https://www.docker.com/products/docker-desktop/)
 
-### 服务部署
-
-#### 1. 在服务器 Clone 仓库
+### 2. 克隆仓库
 
 ```
 git clone https://github.com/eolinker/eoapi-remote-server
+cd eoapi-remote-server
 ```
 
-#### 2. 环境变量配置
+### 3. 环境变量配置
 
 > _如果你没有配置数据库需求，可以[跳过此步骤](#_3-使用-docker-一键启动)，系统会使用默认配置启动_
 
@@ -49,15 +48,16 @@ MYSQL_ROOT_PASSWORD=123456a.
 
 默认情况下，在 `src/config/ormconfig.ts` 和 `docker-compose.yaml` 文件中统一使用了 `.env` 配置里的环境变量，比如：服务端口号、MySQL 连接等信息。
 
-#### 3. 使用 Docker 一键启动
+### 4. 使用 Docker 一键启动
 
-启动成功后，通过 `http://<server_url>:3000` 访问。
+在项目代码根目录下，运行下面命令。
 
 ```bash
 docker-compose up -d --build
 ```
+启动成功后，可通过 `http://<server_url>:3000` 访问服务。
 
-#### 查看实时日志输出
+### 查看实时日志输出
 
 如果需要查看运行日志，可以运行下面命令
 
