@@ -17,7 +17,7 @@
 ## 实时通讯
 如果你在使用中有问题，或者想咨询了解，可以加入群聊，我们会细心答复每一个人的疑问。
 
-习惯 QQ 的用户，可以进 QQ 群反馈(QQ群消息可能回复没那么及时)， QQ群：901062254 ,下方是群二维码：
+习惯 QQ 的用户，可以进 QQ 群反馈(QQ群消息可能回复没那么及时)， QQ群：981965807 ,下方是群二维码：
 <br/>
 <img style="vertical-align: middle;" src="https://data.eolinker.com/course/r2LGwiKebe1dab5526d2988db00998036417eb300f988f0" width="300" class="lg-show" alt="QQ群">
 
