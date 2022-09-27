@@ -15,4 +15,12 @@
 3. <a href="https://segmentfault.com/"><img style="vertical-align: middle;" src="/images/segmentfault.svg" width="140" height="26" class="lg-show" alt="segmentfault"></a>(中文)
 
 ## 实时通讯
+如果你在使用中有问题，或者想咨询了解，可以加入群聊，我们会细心答复每一个人的疑问。
+
+习惯 QQ 的用户，可以进 QQ 群反馈(QQ群消息可能回复没那么及时)，下方是群二维码：
+<br/>
+<img style="vertical-align: middle;" src="https://data.eolinker.com/course/r2LGwiKebe1dab5526d2988db00998036417eb300f988f0" width="300" class="lg-show" alt="QQ群">
+
+当然，<strong>如果你还是习惯用微信，可以添加下方微信，加好友时备注<code> Eoapi </code> ，我会拉你进微信群</strong>：<br/>
 <img style="vertical-align: middle;" src="/assets/images/wechat-card.jpg" width="300" class="lg-show" alt="微信小助手">
+<br/>
