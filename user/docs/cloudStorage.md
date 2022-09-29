@@ -89,6 +89,7 @@ docker images
 
 ![](../assets/images/2022-09-29-10-14-49.png)
 
+
 3. 导出制作好的镜像为本地文件  
 
 语法格式： docker save {目标镜像} -o /{导出位置}/{导出镜像的名称}.tar
