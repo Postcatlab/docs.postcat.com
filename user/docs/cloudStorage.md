@@ -27,15 +27,9 @@ cd eoapi-remote-server
 如果你不需要使用原有 MySQL 数据库，**可以[跳过此步骤](#使用-docker-一键启动)**，服务会将数据储存到容器内 MySQL。
 :::
 
-在 `.env` 文件中统一配置 TOKEN 以及 MySQL 连接、端口等配置信息。
+在 `.env` 文件中统一配置 MySQL 连接、端口等配置信息。
 
 ```bash
-# auth token
-API_KEY=1ab2c3d4e5f61ab2c3d4e5f6
-
-# secret
-JWT_SECRET=123456
-
 # eoapi-server coinfigure
 EOAPI_SERVER_PORT=3008
 EOAPI_SERVER_PATH=/api
@@ -64,6 +58,7 @@ SWAGGER_DESC=Eoapi remote server API document。
 ## 启动服务
 
 如果你的服务器可以联网，可以通过在线部署一键启动。
+
 如果无法联网，请在联网环境打包离线的镜像包后到离线环境下运行。
 
 ### 在线部署
@@ -147,8 +142,8 @@ docker-compose logs -f
 
 ## 客户端配置
 
-点击设置，填入服务器地址、Token 后即可远程协作即可使用远程数据源。
-![](../assets/images/2022-09-14-16-48-50.png)
+点击设置，填入服务器地址后即可使用远程数据源。
+![](../assets/images/2022-09-29-11-43-52.png)
 
 ## 常见问题
 
