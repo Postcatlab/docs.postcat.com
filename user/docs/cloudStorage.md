@@ -25,17 +25,30 @@ cd eoapi-remote-server
 # auth token
 API_KEY=1ab2c3d4e5f61ab2c3d4e5f6
 
+# secret
+JWT_SECRET=123456
+
 # eoapi-server coinfigure
-EOAPI_SERVER_PORT=3000
+EOAPI_SERVER_PORT=3008
+EOAPI_SERVER_PATH=/api
 
 # mysql configure
 TZ=Asia/Shanghai
+# mysql的主机地址，如果连接的是docker容器内部的mysql，需要改为：host.docker.internal
+MYSQL_HOST=localhost
 # 映射到宿主机端口号
 MYSQL_PORT=33066
 MYSQL_USERNAME=root
 MYSQL_DATABASE=eoapi
 MYSQL_PASSWORD=123456a.
 MYSQL_ROOT_PASSWORD=123456a.
+
+# swagger
+SWAGGER_PATH=swagger-docs
+SWAGGER_ENABLE=true
+SWAGGER_VERSION=1.0
+SWAGGER_TITLE=Eoapi-remote-server API文档
+SWAGGER_DESC=Eoapi remote server API document。
 ```
 
 默认情况下，在 `src/config/ormconfig.ts` 和 `docker-compose.yaml` 文件中统一使用了 `.env` 配置里的环境变量，比如：服务端口号、MySQL 连接等信息。
@@ -55,6 +68,45 @@ docker-compose up -d --build
 
 ```bash
 docker-compose logs -f
+```
+
+### 离线部署
+
+> 需要先在有网的环境生成镜像，并导入内网`docker`环境。
+
+在项目根目录下执行以下步骤：
+1. 构建镜像
+
+```bash
+docker compose build  
+```
+
+2. 查看镜像是否打包成功
+
+```bash
+docker images  
+```
+
+![](../assets/images/2022-09-29-10-14-49.png)
+
+3. 导出制作好的镜像为本地文件  
+
+语法格式： docker save {目标镜像} -o /{导出位置}/{导出镜像的名称}.tar
+
+```bash
+docker save eoapi-remote-server -o ./eoapi-remote-server.tar
+```
+
+4. 在内网环境中加载上面我们制作好的本地镜像
+
+```bash
+ docker load < ./eoapi-remote-server.tar 
+``` 
+
+5. 运行离线镜像
+
+```bash
+ docker run --name eoapi-remote-server -d -p 3000:3000 eoapi-remote-server
 ```
 
 ### 服务升级
