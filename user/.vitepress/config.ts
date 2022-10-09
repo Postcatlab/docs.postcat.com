@@ -96,9 +96,9 @@ export default {
                   ],
                 },
                 {
-                  text: "数据源",
-                  link: "/docs/storage",
-                  children: [{ text: "云端数据源", link: "/docs/cloudStorage" }],
+                  text: "团队协作",
+                  link: "/docs/collaborate",
+                  children: [{ text: "云端服务", link: "/docs/storage" }],
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
               ],
