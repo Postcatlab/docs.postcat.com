@@ -67,6 +67,10 @@ export default {
               children: [
                 { text: "产品简介", link: "/index" },
                 {
+                  text: "联系我们",
+                  link: "/docs/contact",
+                },
+                {
                   text: "基础功能",
                   children: [
                     {
@@ -94,16 +98,10 @@ export default {
                 {
                   text: "数据源",
                   link: "/docs/storage",
-                  children: [
-                    { text: "云端数据源", link: "/docs/cloudStorage" }
-                  ],
+                  children: [{ text: "云端数据源", link: "/docs/cloudStorage" }],
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
               ],
-            },
-            {
-              text: "联系我们",
-              link: "/docs/contact",
             },
           ],
         },
@@ -129,7 +127,7 @@ export default {
       // },
     },
     docsRepo: "https://github.com/eolinker/docs.eoapi.io",
-    docsDir:"user",
+    docsDir: "user",
     docsBranch: "main",
     repo: "eolinker/eoapi",
     logo: "/images/logo.svg",

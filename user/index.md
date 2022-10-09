@@ -13,5 +13,6 @@ Eoapi 是一款开源 API 工具，它轻量，同时可拓展。
 
 Eoapi 全称是 Easy & Open API，我们希望通过工具让 API 管理更简单、更开放。
 
-Eolink 在 2022 年开源了 Eoapi 项目，Eoapi 建立在 APIKit 多年以来在 API 全生命周期领域的行业经验基础之上，同时希望通过开源吸收社区中最棒的想法和实践。
+Eolink 在 2022 年开源了 Eoapi 项目，Eoapi 建立在 APIKit 多年以来在 API 全生命周期领域的行业经验基础之上，同时希望通过开源吸收社区中最棒的想法和实践
+
 
