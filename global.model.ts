@@ -1,25 +1,25 @@
-const version = "1.7.0",
+const version = "1.8.0",
   resourceUrl = "https://github.com/eolinker/eoapi/releases/latest/download";
 export let packages = [
   {
     id: "win",
     text: "Windows",
     icon: "windows",
-    link: `${resourceUrl}/eoapi-Setup-${version}.exe`,
+    link: `${resourceUrl}/Eoapi-Setup-${version}.exe`,
     target: "_self",
   },
   {
     id: "mac",
     text: "MacOS(Intel)",
     icon: "apple",
-    link: `${resourceUrl}/eoapi-${version}.dmg`,
+    link: `${resourceUrl}/Eoapi-${version}.dmg`,
     target: "_self",
   },
   {
     id: "mac",
     text: "MacOS(M1)",
     icon: "apple",
-    link: `${resourceUrl}/eoapi-${version}-arm64.dmg`,
+    link: `${resourceUrl}/Eoapi-${version}-arm64.dmg`,
     target: "_self",
   },
 ];

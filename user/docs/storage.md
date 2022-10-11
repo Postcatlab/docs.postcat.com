@@ -146,7 +146,7 @@ docker-compose up -d --build
 ```bash
 docker-compose logs -f
 ```
-## Q&A
+## FAQ
 
 #### 我如何在外部连接 Docker 里面的数据库？
 
