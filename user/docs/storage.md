@@ -50,13 +50,6 @@ MYSQL_USERNAME=root
 MYSQL_DATABASE=eoapi
 MYSQL_PASSWORD=123456a.
 MYSQL_ROOT_PASSWORD=123456a.
-
-# swagger
-SWAGGER_PATH=swagger-docs
-SWAGGER_ENABLE=true
-SWAGGER_VERSION=1.0
-SWAGGER_TITLE=Eoapi-remote-server API文档
-SWAGGER_DESC=Eoapi remote server API document。
 ```
 
 默认情况下，在 `src/config/ormconfig.ts` 和 `docker-compose.yaml` 文件中统一使用了 `.env` 配置里的环境变量，比如：服务端口号、MySQL 连接等信息。
