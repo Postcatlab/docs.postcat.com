@@ -3,7 +3,9 @@
 > 仅客户端支持此功能，如需使用请在导航栏下载相应客户端
 
 我们可以通过配置云端服务将数据储存在云端，实现协作和共享数据。
+
 ## 服务部署
+
 ### 环境
 
 服务依赖 Node.js，为了避免乱七八糟的环境问题，我们通过 Docker 安装部署应用。
@@ -26,21 +28,23 @@ cd eoapi-remote-server
 ### 配置环境变量
 
 :::warning
-如果你不需要使用原有 MySQL 数据库，**可以[跳过此步骤](#使用-docker-一键启动)**，服务会将数据储存到容器内 MySQL。
+如果你不需要修改 MySQL 数据库配置，**可以[跳过此步骤](#使用-docker-一键启动)**，服务会将数据储存到容器内 MySQL。
 :::
 
 在根目录下 `.env` 文件中统一配置 MySQL 连接、端口等配置信息。
 
 ```bash
-# eoapi-server coinfigure
+# Eoapi 服务配置
 EOAPI_SERVER_PORT=3008
 EOAPI_SERVER_PATH=/api
 
-# mysql configure
+# MySQL 配置
 TZ=Asia/Shanghai
-# mysql的主机地址，如果连接的是docker容器内部的mysql，需要改为：host.docker.internal
-MYSQL_HOST=localhost
-# 映射到宿主机端口号
+# MySQL 的主机地址
+# 如果连接的是其他 MySQL 服务器，填写实际地址例如  MYSQL_HOST=localhost
+# 默认使用容器内部的 MySQL 地址是 host.docker.internal
+MYSQL_HOST=host.docker.internal
+# MySQL 端口号
 MYSQL_PORT=33066
 MYSQL_USERNAME=root
 MYSQL_DATABASE=eoapi
@@ -117,6 +121,7 @@ docker save eoapi-remote-server -o ./eoapi-remote-server.tar
 ```bash
  docker run --name eoapi-remote-server -d -p 3000:3000 eoapi-remote-server
 ```
+
 ## 部署成功！
 
 部署完云端服务即可使用协作功能啦，将你部署好的服务器地址分享给你的小伙伴吧。
@@ -146,6 +151,7 @@ docker-compose up -d --build
 ```bash
 docker-compose logs -f
 ```
+
 ## FAQ
 
 #### 我如何在外部连接 Docker 里面的数据库？
