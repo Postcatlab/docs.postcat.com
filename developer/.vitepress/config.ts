@@ -24,6 +24,7 @@ export default {
     ],
     ["script", { src: "/lib/medium-zoom.js" }],
     ["script", { src: "/zoom-image.js" }],
+    ["script", { src: "/lib/setDownload.js" }],
     [
       "script",
       {},
