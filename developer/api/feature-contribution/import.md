@@ -51,3 +51,5 @@ export const importFunc = (data = {}) => {
 ```
 
 当用户触发导入行为后，主系统会调用相应的导入函数（在本例中是`importFunc`）, 并将导入后的数据即时显示在API列表中。
+
+## 导入格式
