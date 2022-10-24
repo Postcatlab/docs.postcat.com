@@ -1,9 +1,9 @@
 ---
 title: 常见问题
 ---
-## 我们为什么要做 Eoapi？为什么有 Eolink 了还要做 Eoapi
+## 我们为什么要做 Eoapi？
 :::info
-这里面有所有关于 Eoapi 起源的答案：[【访谈】Eotalk Vol.01：Eoapi，我们希望以开源的方式构建 API 生态系统](https://community.eolink.com/d/34163-fang-tan-eotalk-vol01eoapiwo-men-xi-wang-yi-kai-yuan-de-fang-shi-gou-jian-api-sheng-tai-xi-tong)
+关于 Eoapi 起源访谈：[Eotalk Vol.01：Eoapi，我们希望以开源的方式构建 API 生态系统](https://community.eolink.com/d/34163-fang-tan-eotalk-vol01eoapiwo-men-xi-wang-yi-kai-yuan-de-fang-shi-gou-jian-api-sheng-tai-xi-tong)
 :::
 在社区中时常会出现“抱怨某商业产品越来越臃肿”的声音，API 工具也是如此。从最早期只做 API 调试的工具，到经过多年的演进后集成全面功能的“庞然大物”，它越来越成熟了，也越来越不适合最初的那批用户了。我们并不需要用到所有的功能，自然也会觉得自己用不上的功能是“多余”的。
 

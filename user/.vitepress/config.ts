@@ -78,23 +78,18 @@ export default {
                       text: "接口测试",
                       link: "/docs/apitest",
                       children: [
-                        { text: "前后置脚本", link: "/docs/script-function" },
-                        { text: "全局变量", link: "/docs/global-variable" },
+                        // { text: "前后置脚本", link: "/docs/script-function" },
                       ],
                     },
                     { text: "接口文档", link: "/docs/apidoc" },
                     { text: "测试环境", link: "/docs/env" },
+                    { text: "全局变量", link: "/docs/global-variable" },
                     { text: "Mock 数据", link: "/docs/mock" },
                   ],
                 },
                 {
                   text: "插件广场",
                   link: "/docs/extensions",
-                  children: [
-                    { text: "导入", link: "/docs/extension-import" },
-                    { text: "导出", link: "/docs/extension-export" },
-                    { text: "推送", link: "/docs/extension-push" },
-                  ],
                 },
                 {
                   text: "团队协作",
