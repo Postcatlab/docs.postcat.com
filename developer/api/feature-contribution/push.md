@@ -49,7 +49,6 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
   "main": "dist/index.js",
   "moduleID": "eoapi-foo", // 插件ID，可以自定义
   "moduleName": "eoapi-foo", // 插件名称，可以自定义
-  "moduleType": "feature",
   "logo": "https://s3.bmp.ovh/imgs/2022/05/18/d8d200e3dc050831.png",
   "scripts": {
     "build": "rollup -c rollup.config.js",

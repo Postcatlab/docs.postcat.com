@@ -54,7 +54,6 @@ Eoapi 应用需要通过入口文件 `package.json` 找到插件，了解插件�
   "module": "{入口文件}",
   "moduleID": "{插件ID}",
   "moduleName": "{显示在插件广场的名称}",
-  "moduleType": "{插件类型：feature}",
   "logo": "{显示在插件广场的Logo}",
   // 在keywords中填写关键字段，利于在插件广场中搜索
   "keywords": [],
