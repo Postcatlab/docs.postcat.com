@@ -84,7 +84,7 @@ export default {
                     { text: "接口文档", link: "/docs/apidoc" },
                     { text: "测试环境", link: "/docs/env" },
                     { text: "全局变量", link: "/docs/global-variable" },
-                    { text: "Mock 数据", link: "/docs/mock" },
+                    { text: "Mock", link: "/docs/mock" },
                   ],
                 },
                 {
@@ -94,7 +94,10 @@ export default {
                 {
                   text: "团队协作",
                   link: "/docs/collaborate",
-                  children: [{ text: "云端服务", link: "/docs/storage" }],
+                  children: [
+                    { text: "云端服务", link: "/docs/storage" },
+                    { text: "API 分享", link: "/docs/apiShare" },
+                  ],
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
               ],

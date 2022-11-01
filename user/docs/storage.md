@@ -117,17 +117,18 @@ docker save eoapi-remote-server -o ./eoapi-remote-server.tar
 
 ## 部署成功！
 
-部署完云端服务即可使用协作功能啦，将你部署好的服务器地址分享给你的小伙伴吧。
+部署完云端服务即可使用协作功能啦，将你部署好的服务器地址(一般是服务器 IP+3002 端口)分享给你的小伙伴吧。
 
 客户端使用文档请看：[团队协作](/docs/collaborate.md)。
 
+如果无法部署成功，请查看 Docker logs 对问题进行排查。(#查看实时日志输出)
 ## 服务升级
 
 :::warning
 升级前建议做好数据库备份
 :::
 
-关闭正在运行的 Docker 服务，拉取最新的代码，再重新创建镜像即可升级成功～
+关闭正在运行的 Docker 服务，拉取最新的代码，再重新创建镜像并运行即可升级成功～
 
 ```
 docker stop eoapi-remote-server
