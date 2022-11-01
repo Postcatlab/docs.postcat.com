@@ -96,7 +96,7 @@ export default {
                   link: "/docs/collaborate",
                   children: [
                     { text: "云端服务", link: "/docs/storage" },
-                    { text: "API 分享", link: "/docs/apiShare" },
+                    // { text: "API 分享", link: "/docs/apiShare" },
                   ],
                 },
                 { text: "常见问题", link: "/docs/FAQ" },
