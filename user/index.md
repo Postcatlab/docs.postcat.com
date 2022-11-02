@@ -1,7 +1,5 @@
-<p align="center">
-    <img width="200" src="/images/logo.png">
-</p>
-Eoapi 是一款开源 API 工具，它提供和 API 有关的核心功能：
+# Eoapi
+我们是一款开源 API 工具，提供和 API 有关的核心功能：
 
 * 📃 API 文档
 * ⚡  API 测试
@@ -14,9 +12,7 @@ Eoapi 是一款开源 API 工具，它提供和 API 有关的核心功能：
 
 > 你可以访问 [Live Demo](https://eoapi.io/) 快速体验产品特性。
 
-![](/images/eoapi-demo.png)
+<iframe src="https://www.eoapi.io" width="1000px" height="700px"  style="border:1px solid #eee;margin-top:15px"></iframe>
 
 
 Eoapi 全称是 Easy & Open API，我们希望通过工具让 API 管理更简单、更开放。
-
-[Eolink](https://www.eolink.com/) 在 2022 年开源了 Eoapi 项目，Eoapi 建立在 APIKit 多年以来在 API 全生命周期领域的行业经验基础之上，同时希望通过开源吸收社区中最棒的想法和实践。
