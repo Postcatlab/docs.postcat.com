@@ -35,7 +35,7 @@ cd eoapi-remote-server
 
 ```bash
 # Eoapi 服务配置
-EOAPI_SERVER_PORT=3008
+EOAPI_SERVER_PORT=3000
 EOAPI_SERVER_PATH=/api
 
 # MySQL 配置
@@ -65,10 +65,10 @@ MYSQL_ROOT_PASSWORD=123456a.
 在项目代码根目录下，运行下面命令。
 
 ```bash
-docker-compose up -d --build
+docker-compose up -d
 ```
 
-如图代表启动成功，可通过 `http://<server_url>:3000` 访问服务。
+如图代表启动成功，可通过 `http://<server_url>:3002` 访问服务。
 ![](../assets/images/2022-09-28-17-43-50.png)
 
 ### 离线部署
@@ -77,13 +77,15 @@ docker-compose up -d --build
 
 在项目根目录下执行以下步骤：
 
-#### 构建镜像
+#### 拉取镜像
 
-```bash
-docker compose build
+在项目代码根目录下，运行下面命令。
+
+```
+docker-compose up -d
 ```
 
-执行查看镜像是否打包成功。
+执行查看镜像是否拉取成功。
 
 ```bash
 docker images
@@ -98,7 +100,10 @@ docker images
 
 ```bash
 # 语法格式： docker save {目标镜像} -o /{导出位置}/{导出镜像的名称}.tar
-docker save eoapi-remote-server -o ./eoapi-remote-server.tar
+docker save eolinker/eoapi-remote-server -o ./eoapi-remote-server.tar
+docker save eolinker/eoapi-test-server -o ./eoapi-test-server.tar
+docker save eolinker/eoapi -o ./eoapi.tar
+docker save mysql -o ./mysql
 ```
 
 #### 导入镜像
@@ -106,15 +111,17 @@ docker save eoapi-remote-server -o ./eoapi-remote-server.tar
 在离线环境中加载上面我们制作好的本地镜像
 
 ```bash
- docker load < ./eoapi-remote-server.tar
+docker load < ./eoapi-remote-server.tar
+docker load < ./eoapi-test-server.tar
+docker load < ./eoapi.tar
+docker load < mysql -o ./mysql
 ```
 
 #### 运行镜像
-
+在 `eoapi-remote-server` 项目代码根目录下，运行下面命令。
 ```bash
- docker run --name eoapi-remote-server -d -p 3000:3000 eoapi-remote-server
+docker-compose up -d
 ```
-
 ## 部署成功！
 
 部署完云端服务即可使用协作功能啦，将你部署好的服务器地址(一般是服务器 IP+3002 端口)分享给你的小伙伴吧。
@@ -122,19 +129,15 @@ docker save eoapi-remote-server -o ./eoapi-remote-server.tar
 客户端使用文档请看：[团队协作](/docs/collaborate.md)。
 
 如果无法部署成功，请查看 Docker logs 对问题进行排查。(#查看实时日志输出)
+
 ## 服务升级
 
 :::warning
 升级前建议做好数据库备份
 :::
 
-关闭正在运行的 Docker 服务，拉取最新的代码，再重新创建镜像并运行即可升级成功～
+删除运行的 Docker 服务，拉取仓库最新的代码，再重新拉取镜像并运行即可升级成功～
 
-```
-docker stop eoapi-remote-server
-git pull
-docker-compose up -d --build
-```
 
 ## 服务监控
 
