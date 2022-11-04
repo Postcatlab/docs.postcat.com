@@ -24,7 +24,7 @@ export default {
     ],
     ["script", { src: "/lib/medium-zoom.js" }],
     ["script", { src: "/lib/setDownload.js" }],
-    ["script", { src: "/zoom-image.js" }]
+    ["script", { src: "/zoom-image.js" }],
   ],
   lastUpdated: true,
   themeConfig: {
@@ -78,6 +78,7 @@ export default {
                 {
                   text: "插件广场",
                   link: "/docs/extensions",
+                  children: [{ text: "离线安装", link: "/docs/local-install-extension" }],
                 },
                 {
                   text: "团队协作",
