@@ -44,31 +44,30 @@ $ npm i
 
 Eoapi 应用需要通过入口文件 `package.json` 找到插件，了解插件的信息，例如名称、版本号、拓展哪部分功能。
 
-除了 `npm schema` 本身的规范字段外，与 `eoapi` 插件相关的主要有以下字段，这里以导出类型的插件为例：
+除了 [npm schema](https://docs.npmjs.com/cli/v8/configuring-npm/package-json) 本身的规范字段外，与 `eoapi` 插件相关的主要有以下字段：
 
 ```json
 {
-  "version": "{npm包的版本号，同时也作为插件的版本号}",
-  "description": "{插件的描述}",
-  "main": "{入口文件}",
-  "module": "{入口文件}",
-  "moduleID": "{插件ID}",
-  "moduleName": "{显示在插件广场的名称}",
-  "logo": "{显示在插件广场的Logo}",
-  // 在keywords中填写关键字段，利于在插件广场中搜索
-  "keywords": [],
-  "author": "Eoapi", //作者
+  "name": "插件唯一字符串 ID，例如:eoapi-import-openapi",
+  "version": "三位字符版本号",
+  "main": "Browser 入口文件",
+  "node": "Node 入口文件",
+  "description": "插件描述",
+  "homepage": "首页地址",
+  "author": "作者名称",
+  //eo 拓展专属字段
+  "title": "插件标题",
+  "logo": "插件 Logo，在线地址/本地地址",
+  //插件所扩展的功能
   "features": {
-    "apimanage.export": {
-      "action": "{导出的主函数名}",
-      "label": "{用户在功能区域看的标识}"
-      // ... 其他个性化配置项
-    }
+    "sidebarView": {},
+    "importAPI": {},
+    "exportAPI": {},
+    "i18n": {},
+    "configuration": {}
   }
 }
 ```
-
-系统在运行插件时，会获取 `feature.apimanage.export` 下的 `action` 得到函数名。进而从插件的包内容中导入该函数并执行。
 
 ### 功能代码
 
@@ -82,14 +81,14 @@ export const exportOpenAPI = (apiInfo) => {
 ```
 
 :::warning
-导出函数的名称（在本例中是`exportOpenAPI`）需要与 `package.json` 中的 `features.apimanage.export.action` 字段的值保持一致。
+导出函数的名称（在本例中是`exportOpenAPI`）需要与 `package.json` 中的 `features.exportAPI.action` 字段的值保持一致。
 :::
 
 ```json
 // package.json
 {
   "features": {
-    "apimanage.export": {
+    "exportAPI": {
       "action": "exportOpenAPI"
     }
   }

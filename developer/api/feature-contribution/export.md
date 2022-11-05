@@ -28,8 +28,6 @@ export const exportFunc = (data = {}) => {
   "version": "1.0.0",
   "description": "The export extension of eoapi",
   "main": "dist/index.js",
-  "moduleID": "eoapi-foo", // 插件ID，可以自定义
-  "moduleName": "eoapi-foo", // 插件名称，可以自定义
   "logo": "https://s3.bmp.ovh/imgs/2022/05/18/d8d200e3dc050831.png",
   "scripts": {
     "build": "rollup -c rollup.config.js",
@@ -39,7 +37,7 @@ export const exportFunc = (data = {}) => {
     "rollup": "^2.70.2"
   },
   "features": {
-    "apimanage.export": {
+    "exportAPI": {
       "action": "exportFunc", // 需要与 index.js 中的主函数名保持一致
       "label": "Data(.json)", // 显示在 UI 上导出区域的名称
       "description": "", // 插件的简要描述
