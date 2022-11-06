@@ -16,3 +16,11 @@
 
 
 Eoapi 全称是 Easy & Open API，我们希望通过工具让 API 管理更简单、更开放。
+
+**努力提升用户体验是我们做开源项目的初心**，近期 Eoapi 也获得 Gitee 官方的认可，荣获 GVP 称号，我们也希望 Eoapi 能继续得到你们的大力支持！
+
+![](http://data.eolinker.com/course/fJYtL9J3a13cec286853a8a80acf68fd4351e44ca4b41ef)
+
+如果你觉得项目还不错，记得 Star 支持一下噢！你们的支持对 Eoapi 真的很重要！
+
+关于项目，如果你有任何的疑问或者建议，记得去 Github 或者 Gitee 上提 Issue ，我们会第一时间处理。
