@@ -137,12 +137,13 @@ docker load < mysql -o ./mysql
 :::
 停止正在运行的 Docker 服务，删除旧的 docker 镜像。
 
-拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server)  仓库 `main` 分支最新的代码，执行下面命令即可升级成功～
+拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server)  仓库 `main` 分支最新的代码.
+
+执行下面命令即可升级成功～
 
 ```
 docker-compose down
 docker image rm $(docker images | grep "eoapi" )
-git pull
 docker-compose up -d
 ```
 
