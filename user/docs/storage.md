@@ -137,7 +137,7 @@ docker load < mysql -o ./mysql
 :::
 停止正在运行的 Docker 服务，删除旧的 docker 镜像。
 
-拉取仓库最新的 `eoapi-remote-server` 仓库代码，再重新拉取镜像并运行即可升级成功～
+拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server)  仓库 `main` 分支最新的代码，执行下面命令即可升级成功～
 
 ```
 docker-compose down
