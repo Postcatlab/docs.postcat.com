@@ -4,7 +4,6 @@ export default {
   lang: "zh-Hans",
   title: "用户使用文档 - Eoapi",
   lastUpdated: true,
-
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     [
@@ -12,16 +11,8 @@ export default {
       {
         src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js",
       },
-    ],
-    ["script", { src: "/lib/medium-zoom.js" }],
-    ["script", { src: "/lib/setDownload.js" }],
-    ["script", { src: "/zoom-image.js" }],
+    ]
   ],
-  markdown: {
-    headers: {
-      level: [0, 0]
-    }
-  },
   themeConfig: {
     lastUpdatedText:"最后更新",
     outlineTitle: '目录',

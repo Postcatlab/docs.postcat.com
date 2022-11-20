@@ -61,10 +61,11 @@ function getClientResource() {
           if (resource) {
             val.href = resource.link;
           } else {
-            console.error(`can't find resource ${val.textContent}`);
+            // console.error(`can't find resource ${val.textContent}`);
           }
         });
       }, 500);
     });
 }
+
 getClientResource();
