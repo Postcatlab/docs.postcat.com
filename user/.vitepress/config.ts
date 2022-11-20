@@ -11,21 +11,22 @@ export default {
       {
         src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js",
       },
-    ]
+    ],
   ],
   themeConfig: {
-    lastUpdatedText:"最后更新",
-    outlineTitle: '目录',
-    siteTitle:' ',
+    lastUpdatedText: "最后更新",
+    outlineTitle: "目录",
+    siteTitle: " ",
     algolia: {
       appId: "DWNA8Q7OW9",
       apiKey: "74082b5eb9ea2c675445503c70f6b4e2",
       indexName: "eoapi",
     },
     nav: [
-      { text: "文档", link: "/", activeMatch: "/" },
+      { text: "文档", link: "/index", activeMatch: "/docs" },
       { text: "Live Demo", link: "https://eoapi.io/" },
       { text: "Github", link: "https://github.com/eolinker/eoapi" },
+      { text: "博客", link: "/release/monthly", activeMatch: "/release" },
       {
         text: "下载",
         ariaLabel: "Download",
@@ -33,6 +34,16 @@ export default {
       },
     ],
     sidebar: {
+      "/release": [
+        {
+          text: "博客",
+          items: [
+            { text: "月报", link: "/release/index", items: [{ text: "耗时半年，Eoapi 正式发布插件广场", link: "/release/extension-market" }] },
+
+            { text: "我们为什么要做 Eoapi", link: "/release/why-eoapi" },
+          ],
+        },
+      ],
       "/": [
         {
           text: "产品手册",
@@ -79,8 +90,8 @@ export default {
     repo: "eolinker/eoapi",
     logo: "/images/logo.svg",
     editLink: {
-        pattern: 'https://github.com/eolinker/docs.eoapi.io/edit/main/user/:path',
-        text: '编辑此文档'
+      pattern: "https://github.com/eolinker/docs.eoapi.io/edit/main/user/:path",
+      text: "编辑此文档",
     },
   },
   srcExclude: ["README.md"],
