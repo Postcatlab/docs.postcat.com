@@ -55,7 +55,7 @@ function getClientResource() {
           );
         });
       setTimeout(() => {
-        let doms = document.getElementsByClassName("isExternal");
+        let doms = document.getElementsByClassName("VPLink");
         [...doms].forEach((val) => {
           let resource = resourceInfo.find((resource) => resource.name === val.textContent);
           if (resource) {
