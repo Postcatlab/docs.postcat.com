@@ -1,10 +1,15 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import "./custom.css";
-import "../lib/setDownload.js";
-import "../lib/zoom-image";
-import "../lib/medium-zoom";
 
-
-
-export default DefaultTheme;
+export default {
+  ...DefaultTheme,
+  async enhanceApp({ app }) {
+    //Client only import script
+    if (!import.meta.env.SSR) {
+      import("../lib/setDownload.js");
+      await import("../lib/medium-zoom.js");
+      import("../lib/zoom-image.js");
+    }
+  },
+};
