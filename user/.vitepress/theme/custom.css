@@ -19,8 +19,8 @@
 .content img {
   margin: 0 auto;
 }
-.container {
-  max-width: 60rem !important;
+.VPImage.logo{
+  height: 35px;
 }
 .medium-zoom-image {
   z-index: 11;

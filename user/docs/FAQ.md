@@ -1,6 +1,4 @@
----
-title: 常见问题
----
+# 常见问题
 ## 我们为什么要做 Eoapi？
 :::info
 关于 Eoapi 起源访谈：[Eotalk Vol.01：Eoapi，我们希望以开源的方式构建 API 生态系统](https://community.eolink.com/d/34163-fang-tan-eotalk-vol01eoapiwo-men-xi-wang-yi-kai-yuan-de-fang-shi-gou-jian-api-sheng-tai-xi-tong)

@@ -36,7 +36,7 @@
 
 除了手动输入，你还可以批量导入请求头部，数据格式为 **key : value** ，一行一条 header 信息，如：
 
-```http
+```html
 Connection: keep-alive
 Content-Encoding: gzip
 Content-Type: application/json
@@ -62,7 +62,7 @@ Date: Mon, 30 Dec 2019 20:49:45 GMT
 
 Query 参数指的是地址栏中跟在问号？后面的参数，如以下地址中的 user_name 参数：
 
-```http
+```text
 /user/login?user_name=jackliu
 ```
 
@@ -78,7 +78,7 @@ api.eolinker.com/user/login?user_name=jackliu&user_password=hello
 
 REST 参数指的是地址栏被斜杠/分隔的参数，如以下地址中的使用大括号包裹起来的 user_name、user_password 参数：
 
-```
+```text
 /user/login/{user_name}/{user_password}
 ```
 
