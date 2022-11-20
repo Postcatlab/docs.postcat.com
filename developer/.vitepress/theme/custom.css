@@ -19,14 +19,14 @@
 .content img {
   margin: 0 auto;
 }
-.container {
-  max-width: 60rem !important;
+.VPImage.logo{
+  height: 35px;
 }
 .medium-zoom-image {
-  z-index: 11;
+  z-index: 21;
 }
 .medium-zoom--opened .medium-zoom-overlay{
-  z-index: 10;
+  z-index: 20;
 }
 .sidebar
   > .sidebar-links

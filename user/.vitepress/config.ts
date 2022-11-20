@@ -91,7 +91,4 @@ export default {
       },
     },
   },
-  // vite: {
-  //   plugins: [WindiCSS()]
-  // },
 };
