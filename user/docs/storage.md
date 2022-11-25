@@ -159,7 +159,16 @@ docker-compose logs -f
 :::info
 遇到问题请先[查看日志](#查看实时日志输出)～，如果仍然无法解决，可以[联系我们](/docs/contact.html)。
 :::
-#### 我如何在外部连接 Docker 里面的数据库？
+## Docker 编排服务解析
+Docker 一键部署后，会运行以下四个服务：
+* eoapi：前端服务
+* eoapi-remote-server：后端服务
+* eoapi-test-server：测试服务，用于 web 端发起 API 测试
+* mysql：数据库服务
+
+部署时可以根据自己的需求修改 docker-compose 文件组合服务。
+
+## 我如何在外部连接 Docker 里面的数据库？
 
 Docker 里面的数据库开放了相应端口，.env 文件里面有默认配置，在数据库工具中填写[地址/端口/用户名/密码]直接连接即可
 
@@ -170,7 +179,7 @@ MYSQL_DATABASE=eoapi
 MYSQL_PASSWORD=123456a.
 ```
 
-#### Docker TLS handshake timeout
+## Docker TLS handshake timeout
 
 ```shell
 ERROR: Head "https://registry-1.docker.io/v2/library/mysql/manifests/latest": net/http: TLS handshake timeout
@@ -178,7 +187,7 @@ ERROR: Head "https://registry-1.docker.io/v2/library/mysql/manifests/latest": ne
 
 国外镜像的原因，可以打开代理或者国内镜像安装
 
-#### MacOS 系统 Docker is not shared from the host and is not known to Docker
+## MacOS 系统 Docker is not shared from the host and is not known to Docker
 
 ![](../assets/images/2022-09-28-17-36-05.png)
 配置 Docker 文件分享路径后，重启命令行再次执行命令即可解决
