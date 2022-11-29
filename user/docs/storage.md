@@ -192,3 +192,9 @@ ERROR: Head "https://registry-1.docker.io/v2/library/mysql/manifests/latest": ne
 ![](../assets/images/2022-09-28-17-36-05.png)
 配置 Docker 文件分享路径后，重启命令行再次执行命令即可解决
 ![](../assets/images/2022-09-28-17-37-57.png)
+
+## Linux 下 getaddrinfo ENOFOUND host.docker.internal 
+Docker 容器内访问问题，可能原因：
+* Docker 版本兼容：https://www.cnblogs.com/forlive/p/15989409.html
+* 防火墙拦截
+* Docker 升级没有重启...

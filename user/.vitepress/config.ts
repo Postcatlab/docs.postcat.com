@@ -38,7 +38,13 @@ export default {
         {
           text: "博客",
           items: [
-            { text: "月报", link: "/release/index", items: [{ text: "耗时半年，Eoapi 正式发布插件广场", link: "/release/extension-market" }] },
+            {
+              text: "月报",
+              link: "/release/index",
+              items: [
+                { text: "耗时半年，Eoapi 正式发布插件广场", link: "/release/extension-market" }
+              ],
+            },
 
             { text: "我们为什么要做 Eoapi", link: "/release/why-eoapi" },
           ],
