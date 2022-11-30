@@ -59,6 +59,7 @@ MYSQL_ROOT_PASSWORD=123456a.
 如果无法联网，请使用[离线部署](#离线部署)。
 
 ### 在线部署
+
 :::warning
 需要先在相应数据库创建数据表 eoapi（和配置文件写的表名保持一致）。
 :::
@@ -135,7 +136,7 @@ docker load < mysql -o ./mysql
 :::
 停止正在运行的 Docker 服务，删除旧的 docker 镜像。
 
-拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server)  仓库 `main` 分支最新的代码.
+拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server) 仓库 `main` 分支最新的代码.
 
 执行下面命令即可升级成功～
 
@@ -156,15 +157,19 @@ docker-compose logs -f
 ```
 
 ## FAQ
+
 :::info
 遇到问题请先[查看日志](#查看实时日志输出)～，如果仍然无法解决，可以[联系我们](/docs/contact.html)。
 :::
+
 ## Docker 编排服务解析
+
 Docker 一键部署后，会运行以下四个服务：
-* eoapi：前端服务
-* eoapi-remote-server：后端服务
-* eoapi-test-server：测试服务，用于 web 端发起 API 测试
-* mysql：数据库服务
+
+- eoapi：前端服务
+- eoapi-remote-server：后端服务
+- eoapi-test-server：测试服务，用于 web 端发起 API 测试
+- mysql：数据库服务
 
 部署时可以根据自己的需求修改 docker-compose 文件组合服务。
 
@@ -193,8 +198,10 @@ ERROR: Head "https://registry-1.docker.io/v2/library/mysql/manifests/latest": ne
 配置 Docker 文件分享路径后，重启命令行再次执行命令即可解决
 ![](../assets/images/2022-09-28-17-37-57.png)
 
-## Linux 下 getaddrinfo ENOFOUND host.docker.internal 
-Docker 容器内访问问题，可能原因：
-* Docker 版本兼容：https://www.cnblogs.com/forlive/p/15989409.html
-* 防火墙拦截
-* Docker 升级没有重启...
+## eoapi-remote-server getaddrinfo ENOFOUND
+
+Docker 容器内访问 mysql 问题，可能原因：
+
+- 33066 默认端口被安全组防火墙拦截，如果本机只部署了 eoapi 的 mysql，可以将 .env MYSQL_PORT 改为 3306
+- Docker 版本兼容：https://www.cnblogs.com/forlive/p/15989409.html
+- Docker 升级没有重启
