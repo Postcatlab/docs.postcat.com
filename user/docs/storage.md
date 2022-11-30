@@ -30,7 +30,9 @@ cd eoapi-remote-server
 :::
 
 在根目录下 `.env` 文件中统一配置 MySQL 连接、端口等配置信息。
-
+:::info
+如果配置容器外的 MYSQL 数据库，版本需要大于等于 5.8.7，推荐 8.x。
+:::
 ```bash
 # Eoapi 服务配置
 EOAPI_SERVER_PORT=3000
