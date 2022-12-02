@@ -33,6 +33,7 @@ cd eoapi-remote-server
 :::info
 如果配置容器外的 MYSQL 数据库，版本需要大于等于 5.8.7，推荐 8.x。
 :::
+
 ```bash
 # Eoapi 服务配置
 EOAPI_SERVER_PORT=3000
@@ -40,19 +41,17 @@ EOAPI_SERVER_PATH=/api
 
 # MySQL 配置
 TZ=Asia/Shanghai
-# MySQL 的主机地址
-# 如果连接的是其他 MySQL 服务器，填写实际地址例如  MYSQL_HOST=localhost
-# 默认使用容器内部的 MySQL 地址是 host.docker.internal
-MYSQL_HOST=host.docker.internal
+# MySQL 的主机地址,默认使用容器内部的 MySQL
+# 如果连接的是其他 MySQL 服务器，填写实际地址
+# 例如  MYSQL_HOST=host.docker.internal（当前宿主机地址）
+MYSQL_HOST=mysql
 # MySQL 端口号
-MYSQL_PORT=33066
+MYSQL_PORT=3306
 MYSQL_USERNAME=root
 MYSQL_DATABASE=eoapi
 MYSQL_PASSWORD=123456a.
 MYSQL_ROOT_PASSWORD=123456a.
 ```
-
-默认情况下，在 `src/config/ormconfig.ts` 和 `docker-compose.yaml` 文件中统一使用了 `.env` 配置里的环境变量，比如：服务端口号、MySQL 连接等信息。
 
 ## 服务运行
 
@@ -63,7 +62,7 @@ MYSQL_ROOT_PASSWORD=123456a.
 ### 在线部署
 
 :::warning
-需要先在相应数据库创建数据表 eoapi（和配置文件写的表名保持一致）。
+需要先在相应数据库创建数据表 eoapi（和 `.evn` 配置文件写的表名保持一致）
 :::
 
 在项目代码根目录下，运行下面命令。
@@ -123,7 +122,7 @@ docker load < mysql -o ./mysql
 
 剩余步骤和[在线部署](#在线部署)一致。
 
-## 部署成功！
+## 部署成功✅
 
 部署完云端服务即可使用协作功能啦，将你部署好的服务器地址(一般是服务器 IP+3002 端口)分享给你的小伙伴吧!
 
@@ -148,7 +147,7 @@ docker image rm $(docker images | grep "eoapi" )
 docker-compose up -d
 ```
 
-## 服务监控
+## 服务日志
 
 #### 查看实时日志输出
 
@@ -158,13 +157,13 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
-## FAQ
+## 常见问题
 
 :::info
 遇到问题请先[查看日志](#查看实时日志输出)～，如果仍然无法解决，可以[联系我们](/docs/contact.html)。
 :::
 
-## Docker 编排服务解析
+### Docker 编排服务解析
 
 Docker 一键部署后，会运行以下四个服务：
 
@@ -175,7 +174,7 @@ Docker 一键部署后，会运行以下四个服务：
 
 部署时可以根据自己的需求修改 docker-compose 文件组合服务。
 
-## 我如何在外部连接 Docker 里面的数据库？
+### 我如何在外部连接 Docker 里面的数据库？
 
 Docker 里面的数据库开放了相应端口，.env 文件里面有默认配置，在数据库工具中填写[地址/端口/用户名/密码]直接连接即可
 
@@ -186,7 +185,7 @@ MYSQL_DATABASE=eoapi
 MYSQL_PASSWORD=123456a.
 ```
 
-## Docker TLS handshake timeout
+### Docker TLS handshake timeout
 
 ```shell
 ERROR: Head "https://registry-1.docker.io/v2/library/mysql/manifests/latest": net/http: TLS handshake timeout
@@ -194,16 +193,18 @@ ERROR: Head "https://registry-1.docker.io/v2/library/mysql/manifests/latest": ne
 
 国外镜像的原因，可以打开代理或者国内镜像安装
 
-## MacOS 系统 Docker is not shared from the host and is not known to Docker
+### MacOS 系统 Docker is not shared from the host and is not known to Docker
 
 ![](../assets/images/2022-09-28-17-36-05.png)
 配置 Docker 文件分享路径后，重启命令行再次执行命令即可解决
 ![](../assets/images/2022-09-28-17-37-57.png)
 
-## eoapi-remote-server getaddrinfo ENOFOUND
+### 服务启动成功，但接口报错
 
-Docker 容器内访问 mysql 问题，可能原因：
+如果遇到服务启动成功，但接口 500、无法访问。
 
-- 33066 默认端口被安全组防火墙拦截，如果本机只部署了 eoapi 的 mysql，可以将 .env MYSQL_PORT 改为 3306
+大概率是 Docker 容器内访问 MySQL 问题，可能原因：
+
+- MySQL 端口被安全组防火墙拦截
 - Docker 版本兼容：https://www.cnblogs.com/forlive/p/15989409.html
 - Docker 升级没有重启
