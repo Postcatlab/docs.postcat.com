@@ -169,7 +169,7 @@ Docker 一键部署后，会运行以下四个服务：
 
 - eoapi：前端服务
 - eoapi-remote-server：后端服务
-- eoapi-test-server：测试服务，用于 web 端发起 API 测试
+- eoapi-test-server：Web 测试服务，因为 Web 跨域问题无法直接发起测试，所以需要部署服务转发 API 测试
 - mysql：数据库服务
 
 部署时可以根据自己的需求修改 docker-compose 文件组合服务。

@@ -1,0 +1,37 @@
+import{_ as n,c as s,o as a,a as t}from"./app.68c6bb90.js";const m='{"title":"\u5BFC\u51FA","description":"","frontmatter":{},"headers":[{"level":2,"title":"\u793A\u4F8B\u4EE3\u7801","slug":"\u793A\u4F8B\u4EE3\u7801"},{"level":2,"title":"\u914D\u7F6E","slug":"\u914D\u7F6E"}],"relativePath":"api/feature-contribution/export.md","lastUpdated":1658299768000}',o={},p=t(`<h1 id="\u5BFC\u51FA" tabindex="-1">\u5BFC\u51FA <a class="header-anchor" href="#\u5BFC\u51FA" aria-hidden="true">#</a></h1><p>\u53EF\u4EE5\u4F7F\u7528\u5BFC\u51FA\u7C7B\u63D2\u4EF6\u5B9A\u671F\u5907\u4EFD\u6570\u636E\u3001\u4E0E\u5176\u4ED6\u5E73\u53F0\u540C\u6B65\u6570\u636E\uFF1B</p><h2 id="\u793A\u4F8B\u4EE3\u7801" tabindex="-1">\u793A\u4F8B\u4EE3\u7801 <a class="header-anchor" href="#\u793A\u4F8B\u4EE3\u7801" aria-hidden="true">#</a></h2><p><a href="https://github.com/eolinker/eoapi-extensions/tree/main/packages/feature/export/openapi" target="_blank" rel="noopener noreferrer">eoapi to openapi</a></p><h2 id="\u914D\u7F6E" tabindex="-1">\u914D\u7F6E <a class="header-anchor" href="#\u914D\u7F6E" aria-hidden="true">#</a></h2><div class="language-javascript"><pre><code><span class="token comment">// index.js</span>
+
+<span class="token comment">// * \u5BFC\u51FA\u65B9\u5F0F\u5FC5\u987B\u662F\u547D\u540D\u5BFC\u51FA\uFF0C\u65B9\u6CD5\u540D\u9700\u8981\u4E0E\u914D\u7F6E\u4E2D\u7684 action \u5B57\u6BB5\u4E00\u81F4</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">exportFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// * \u4F20\u5165\u53C2\u6570\u662F Eoapi \u7684API\u6570\u636E\u7ED3\u6784</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#39;eoapi&#39;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-json"><pre><code><span class="token comment">// package.json</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eoapi-foo&quot;</span><span class="token punctuation">,</span> <span class="token comment">// npm\u5305\u540D\u79F0</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;The export extension of eoapi&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dist/index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;moduleID&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eoapi-foo&quot;</span><span class="token punctuation">,</span> <span class="token comment">// \u63D2\u4EF6ID\uFF0C\u53EF\u4EE5\u81EA\u5B9A\u4E49</span>
+  <span class="token property">&quot;moduleName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eoapi-foo&quot;</span><span class="token punctuation">,</span> <span class="token comment">// \u63D2\u4EF6\u540D\u79F0\uFF0C\u53EF\u4EE5\u81EA\u5B9A\u4E49</span>
+  <span class="token property">&quot;moduleType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;feature&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;logo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://s3.bmp.ovh/imgs/2022/05/18/d8d200e3dc050831.png&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c rollup.config.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build:watch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -w -c rollup.config.js&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;rollup&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.70.2&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;features&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;apimanage.export&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;action&quot;</span><span class="token operator">:</span> <span class="token string">&quot;exportFunc&quot;</span><span class="token punctuation">,</span> <span class="token comment">// \u9700\u8981\u4E0E index.js \u4E2D\u7684\u4E3B\u51FD\u6570\u540D\u4FDD\u6301\u4E00\u81F4</span>
+      <span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Data(.json)&quot;</span><span class="token punctuation">,</span> <span class="token comment">// \u663E\u793A\u5728 UI \u4E0A\u5BFC\u51FA\u533A\u57DF\u7684\u540D\u79F0</span>
+      <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">// \u63D2\u4EF6\u7684\u7B80\u8981\u63CF\u8FF0</span>
+      <span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;data.json&quot;</span> <span class="token comment">// \u5BFC\u51FA\u540E\u751F\u6210\u7684\u6587\u4EF6\u540D</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>\u76EE\u524D\uFF0C\u5BFC\u51FA\u540E\u5199\u5165\u6587\u4EF6\u7684\u64CD\u4F5C\u7531\u6838\u5FC3\u7CFB\u7EDF\u5B8C\u6210\uFF0C\u56E0\u6B64\u5BFC\u51FA\u7684\u62D3\u5C55\u53EA\u9700\u8981\u8FD4\u56DE\u5BFC\u51FA\u7684\u6587\u4EF6\u5185\u5BB9\u3002</p>`,8),e=[p];function c(r,u,l,i,k,q){return a(),s("div",null,e)}var g=n(o,[["render",c]]);export{m as __pageData,g as default};

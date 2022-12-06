@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,a as t}from"./app.68c6bb90.js";const u='{"title":"\u4ECB\u7ECD","description":"","frontmatter":{},"headers":[],"relativePath":"api/overview.md","lastUpdated":1652975500000}',o={},i=t("",5),n=[i];function p(s,_,c,h,l,d){return r(),a("div",null,n)}var k=e(o,[["render",p]]);export{u as __pageData,k as default};

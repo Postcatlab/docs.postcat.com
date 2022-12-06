@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./app.68c6bb90.js";const f='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"api/api.md","lastUpdated":1652068774000}',r={};function o(s,c,p,n,i,_){return a(),e("div")}var l=t(r,[["render",o]]);export{f as __pageData,l as default};

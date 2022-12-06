@@ -1,0 +1,1 @@
+import{_ as e,c as t,o,b as a}from"./app.68c6bb90.js";const f='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"en/docs/about.md","lastUpdated":1652710804000}',s={},n=a("p",null,"No English document yet, contributions are welcome~",-1),c=[n];function r(d,_,i,l,p,u){return o(),t("div",null,c)}var h=e(s,[["render",r]]);export{f as __pageData,h as default};
