@@ -146,6 +146,7 @@ docker-compose up -d
 
 :::warning
 Eoapi 数据库数据是通过 Volumnes 持久化到本地，无需担心删除镜像会删除数据。
+
 升级前备份数据库也是个好习惯👍。
 :::
 ## 服务日志
