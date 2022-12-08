@@ -132,12 +132,9 @@ docker load < mysql -o ./mysql
 
 ## 服务升级
 
-:::warning
-升级前建议做好数据库备份
-:::
 停止正在运行的 Docker 服务，删除旧的 docker 镜像。
 
-拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server) 仓库 `main` 分支最新的代码.
+拉取 [eoapi-remote-server](https://github.com/eolinker/eoapi-remote-server) 仓库 `main` 分支最新的代码。
 
 执行下面命令即可升级成功～
 
@@ -147,6 +144,10 @@ docker image rm $(docker images | grep "eoapi" )
 docker-compose up -d
 ```
 
+:::warning
+Eoapi 数据库数据是通过 Volumnes 持久化到本地，无需担心删除镜像会删除数据。
+升级前备份数据库也是个好习惯👍。
+:::
 ## 服务日志
 
 #### 查看实时日志输出
