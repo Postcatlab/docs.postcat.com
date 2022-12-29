@@ -15,5 +15,7 @@
     "vitepress": "^1.0.0-alpha.29",
     "windicss": "^3.5.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "medium-zoom": "^1.0.8"
+  }
 }

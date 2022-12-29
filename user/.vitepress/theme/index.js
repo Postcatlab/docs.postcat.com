@@ -1,15 +1,14 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import "./custom.css";
+import { onMounted } from "vue";
+import mediumZoom from "medium-zoom";
 
 export default {
   ...DefaultTheme,
-  async enhanceApp({ app }) {
-    //Client only import script
-    if (!import.meta.env.SSR) {
-      import("../lib/setDownload.js");
-      await import("../lib/medium-zoom.js");
-      import("../lib/zoom-image.js");
-    }
+  setup() {
+    onMounted(() => {
+      mediumZoom(".main img", { background: "var(--vp-c-bg)" });
+    });
   },
 };
