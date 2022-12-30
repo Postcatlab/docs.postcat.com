@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <a class="eo_link" href="https://eoapi.io" target="_blank"
+        <a class="eo_link" href="https://postcat.com" target="_blank"
           ><button class="eo_btn eo_btn_default" type="button">
             Live Demo
           </button></a
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="image_demo_container">
-      <img class="image_demo" src="/images/eoapi-demo.jpg" />
+      <img class="image_demo" src="/images/postcat-demo.jpg" />
     </div>
   </div>
   <div class="f_row_ac container_1">

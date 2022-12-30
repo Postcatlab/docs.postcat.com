@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Eoapi</h1>
+  <h1 class="title">Postcat</h1>
   <p class="desc">An extensible open source API tool</p>
   <div class="download-links-list f_row f_jc_ac">
     <div
@@ -14,19 +14,16 @@
       <span class="item-text-show">{{ item.name }}</span>
     </div>
   </div>
-  <img data-zoomable src="/images/eoapi-demo.png" />
+  <img data-zoomable src="/images/postcat-demo.png" />
 </template>
 
 <script>
 export default {
   name: "home",
-  data() {
-    
-  },
-  methods: {
-  },
+  data() {},
+  methods: {},
   mounted() {
-    console.log(1)
+    console.log(1);
   },
 };
 </script>

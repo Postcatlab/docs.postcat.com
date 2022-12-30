@@ -14,19 +14,19 @@
 安装命令行工具
 
 ```bash
-$ npm i -g @eoapi/cli
+$ npm i -g @postcat/cli
 ```
 
-现在你可以在全局范围内使用 `eo` 命令了。
+现在你可以在全局范围内使用 `pcex` 命令了。
 
 ### 创建插件模板
 
 现在可以创建一个最简单的模板，它会包含最基本的构建配置，如有需要你可以修改配置、甚至完全使用自己的配置。
 
 ```bash
-$ eo g foo
+$ pcex g foo
 # or
-$ eo generate foo
+$ pcex generate foo
 ```
 
 ![create-extension](../assets/images/create-extension.svg)
@@ -42,20 +42,20 @@ $ npm i
 
 ### 入口文件
 
-Eoapi 应用需要通过入口文件 `package.json` 找到插件，了解插件的信息，例如名称、版本号、拓展哪部分功能。
+Postcat 应用需要通过入口文件 `package.json` 找到插件，了解插件的信息，例如名称、版本号、拓展哪部分功能。
 
-除了 [npm schema](https://docs.npmjs.com/cli/v8/configuring-npm/package-json) 本身的规范字段外，与 `eoapi` 插件相关的主要有以下字段：
+除了 [npm schema](https://docs.npmjs.com/cli/v8/configuring-npm/package-json) 本身的规范字段外，与 `postcat` 插件相关的主要有以下字段：
 
 ```json
 {
-  "name": "插件唯一字符串 ID，例如:eoapi-import-openapi",
+  "name": "插件唯一字符串 ID，例如:postcat-import-openapi",
   "version": "三位字符版本号",
   "main": "Browser 入口文件",
   "node": "Node 入口文件",
   "description": "插件描述",
   "homepage": "首页地址",
   "author": "作者名称",
-  //eo 拓展专属字段
+  //postcat 拓展专属字段
   "title": "插件标题",
   "logo": "插件 Logo，在线地址/本地地址",
   //插件所扩展的功能
@@ -76,7 +76,7 @@ Eoapi 应用需要通过入口文件 `package.json` 找到插件，了解插件�
 ```js
 // src/index.js
 export const exportOpenAPI = (apiInfo) => {
-  return transformEoapiToOpenAPI(apiInfo); // 将 Eoapi 格式的数据转换成 OpenAPI 格式的数据
+  return transformPostcatToOpenAPI(apiInfo); // 将 Postcat 格式的数据转换成 OpenAPI 格式的数据
 };
 ```
 
@@ -97,14 +97,14 @@ export const exportOpenAPI = (apiInfo) => {
 
 ## 调试
 
-当我们开发了一个叫 `foo` 的插件后，需要将它映射到本地，并让 Eoapi 能够识别它。我们已经帮你做了一些工作，你只需要运行以下命令，即等效于正式安装了插件在本地。
+当我们开发了一个叫 `foo` 的插件后，需要将它映射到本地，并让 Postcat 能够识别它。我们已经帮你做了一些工作，你只需要运行以下命令，即等效于正式安装了插件在本地。
 
 ```bash
-$ eo debug foo
+$ pcex debug foo
 ```
 
 :::warning
-目前部分插件需要重启 Eoapi 后才能看到更新，我们正在开发体验良好的热更新功能。
+目前部分插件需要重启 Postcat 后才能看到更新，我们正在开发体验良好的热更新功能。
 :::
 
 ## 打包
@@ -118,7 +118,7 @@ $ eo debug foo
 2. 开发完成并构建后，通过以下命令将插件上传到官方的插件广场。
 
 ```bash
-$ eo upload foo
+$ pcex upload foo
 ```
 
 经过官方审核后，才能在真正在插件广场中看到，整个过程通常需要一天的时间。

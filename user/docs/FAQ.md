@@ -1,17 +1,16 @@
 # 常见问题
 
 ## 我们和其他 API 工具的区别是什么？
+
 > 更强的文档，可扩展的插件、更良好的体验
 
-* 我们提供插件广场，让开发者可以在原有系统基础上拓展功能，打造和组装趁手的工具；
-* 我们开源，代码完全公开；
-* 我们提供更强的文档功能；
-* 我们支持将服务部署到你的服务器。
-
+- 我们提供插件广场，让开发者可以在原有系统基础上拓展功能，打造和组装趁手的工具；
+- 我们开源，代码完全公开；
+- 我们提供更强的文档功能；
 
 ### 可拓展
 
-Eoapi 支持拓展系统，拓展系统有两点好处：
+Postcat 支持拓展系统，拓展系统有两点好处：
 
 - 可以只选择自己需要的功能，随时插拔
 - 在遇到不满足现有需求的场景下，可以选择自己动手开发拓展
@@ -21,7 +20,9 @@ Eoapi 支持拓展系统，拓展系统有两点好处：
 同时我们将会配套相应的文档、拓展示例以及提供一系列流畅的开发者体验脚手架，让大家可以快速的上手定制趁手的“兵器”。
 
 ## 请求体格式有哪些？
+
 ### JSON
+
 ```json
 {
   "string": "test",
@@ -33,14 +34,16 @@ Eoapi 支持拓展系统，拓展系统有两点好处：
   "boolean": false
 }
 ```
+
 ### Form-data
+
 有两种格式的 Form-data（表单） 数据，`multipart/form-data` 和 `application/x-www-form-urlencoded`;
 
 现代浏览器中，使用表单提交请求的情况已经比较少了，所以用得比较多的是 `application/x-www-form-urlencoded`，但是有一个特例，如果你的请求需要上传文件，那请求体格式无疑是 `multipart/form-data` 了。
 
 1. Form-data[content-type="multipart/form-data;"]
 
-![](../assets/images/formdata.png) 
+![](../assets/images/formdata.png)
 
 ```Text
 ------WebKitFormBoundaryNWnXbkVpqUPjFVZq
@@ -56,12 +59,14 @@ formDataStructure
 
 2. Form-data[content-type="application/x-www-form-urlencoded"]
 
-![](../assets/images/form-data-x-www.png) 
+![](../assets/images/form-data-x-www.png)
 
 ```text
 a=1&b=2
 ```
+
 ### XML
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
@@ -75,7 +80,9 @@ a=1&b=2
   </memberList>
 </root>
 ```
+
 ### Raw
+
 ```text
 random text string
 ```
