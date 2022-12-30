@@ -1,13 +1,13 @@
 # 推送
 
-推送类插件允许我们将 Eoapi 上的数据一键推送到各个应用平台，例如：
+推送类插件允许我们将 Postcat 上的数据一键推送到各个应用平台，例如：
 
 - 推送到网关上完成 API 上线
 - 和低代码平台结合，将 API 快速变成低代码平台中可使用的组件等。
 
 ## 示例代码
 
-一键将 API 推送到其他平台：[eoapi push eolink](https://github.com/eolinker/eoapi-extensions/tree/main/packages/feature/push/eolink)
+一键将 API 推送到其他平台：[postcat push eolink](https://github.com/eolinker/postcat-extensions/tree/main/packages/postcat-push-eolink)
 
 ## 配置
 
@@ -16,12 +16,12 @@
 
 export const exportFunc = (data = {}) => {
   return {
-    name: "eoapi",
+    name: "postcat",
   };
 };
 // * 导出方式必须是命名导出，方法名需要与配置中的 action 字段一致
 export const sync_to_remote = async (data = {}, { url, token }) => {
-  // * 传入参数是 Eoapi 的API数据结构
+  // * 传入参数是 Postcat 的API数据结构
   const formData = new FormData();
   formData.append(
     "file",
@@ -30,7 +30,7 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
       type: "application/json",
     })
   );
-  // * 地址在eoapi中配置
+  // * 地址在 Postcat 中配置
   const response = await fetch(url, {
     method: "POST",
     headers: { token },
@@ -43,12 +43,12 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
 ```json
 // package.json
 {
-  "name": "eoapi-foo", // npm包名称
+  "name": "postcat-foo", // npm包名称
   "version": "1.0.0",
-  "description": "Eoapi extension for push api data",
+  "description": "Postcat extension for push api data",
   "main": "dist/index.js",
-  "moduleID": "eoapi-foo", // 插件ID，可以自定义
-  "moduleName": "eoapi-foo", // 插件名称，可以自定义
+  "moduleID": "postcat-foo", // 插件ID，可以自定义
+  "moduleName": "postcat-foo", // 插件名称，可以自定义
   "logo": "https://s3.bmp.ovh/imgs/2022/05/18/d8d200e3dc050831.png",
   "scripts": {
     "build": "rollup -c rollup.config.js",

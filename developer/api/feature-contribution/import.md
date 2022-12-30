@@ -1,11 +1,10 @@
-
 # 导入
 
-可以使用导入类插件将其他平台的数据导入到 Eoapi 。
+可以使用导入类插件将其他平台的数据导入到 Postcat 。
 
 ## 示例代码
 
-[eoapi to openapi](https://github.com/eolinker/eoapi-extensions/tree/main/packages/feature/import/openapi)
+[postcat to openapi](https://github.com/eolinker/postcat-extensions/tree/main/packages/postcat-export-openapi)
 
 ## 配置
 
@@ -16,17 +15,17 @@
 export const importFunc = (data = {}) => {
   // * 传入参数是其他平台（如openapi）的API数据结构
   return {
-    name: 'eoapi',
-  }
-}
+    name: "postcat",
+  };
+};
 ```
 
 ```json
 // package.json
 {
-  "name": "eoapi-foo", // npm包名称
+  "name": "postcat-foo", // npm包名称
   "version": "1.0.0",
-  "description": "The import extension of eoapi",
+  "description": "The import extension of postcat",
   "main": "dist/index.js",
   "logo": "https://s3.bmp.ovh/imgs/2022/05/18/d8d200e3dc050831.png",
   "scripts": {
@@ -41,15 +40,16 @@ export const importFunc = (data = {}) => {
       "action": "importFunc", // 需要与 index.js 中的主函数名保持一致
       "label": "Data(.json)", // 显示在 UI 上导入区域的名称
       "description": "", // 插件的简要描述
-      "icon": "",
+      "icon": ""
     }
   }
 }
 ```
 
-当用户触发导入行为后，主系统会调用相应的导入函数（在本例中是`importFunc`）, 并将导入后的数据即时显示在API列表中。
+当用户触发导入行为后，主系统会调用相应的导入函数（在本例中是`importFunc`）, 并将导入后的数据即时显示在 API 列表中。
 
 ## 导入格式 JSON-Schema
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -190,7 +190,7 @@ export const importFunc = (data = {}) => {
     },
     "method": {
       "$ref": "#/definitions/RequestMethod",
-      "default":"POST",
+      "default": "POST",
       "description": "Request method [POST, GET, PUT, ...]"
     },
     "name": {
@@ -220,11 +220,11 @@ export const importFunc = (data = {}) => {
             "$ref": "#/definitions/ApiEditBody"
           },
           "type": "array",
-          "default":[]
+          "default": []
         },
         {
           "type": "string",
-          "default":""
+          "default": ""
         }
       ],
       "default": "",
@@ -311,5 +311,4 @@ export const importFunc = (data = {}) => {
   "additionalProperties": false,
   "type": "object"
 }
-
 ```

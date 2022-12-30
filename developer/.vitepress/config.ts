@@ -8,14 +8,14 @@ export default {
     [
       "script",
       {
-        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js"
-      }
-    ]
+        src: "https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_10812_9.04dec48becbe244b12f6eca51b76db33.js",
+      },
+    ],
   ],
   themeConfig: {
-    lastUpdatedText:"最后更新",
-    outlineTitle: '目录',
-    siteTitle:' ',
+    lastUpdatedText: "最后更新",
+    outlineTitle: "目录",
+    siteTitle: " ",
     algolia: {
       appId: "DWNA8Q7OW9",
       apiKey: "74082b5eb9ea2c675445503c70f6b4e2",
@@ -23,13 +23,13 @@ export default {
     },
     nav: [
       { text: "文档", link: "/", activeMatch: "/" },
-      { text: "Live Demo", link: "https://eoapi.io/" },
-      { text: "Github", link: "https://github.com/eolinker/eoapi" },
+      { text: "Live Demo", link: "https://postcat.com/" },
+      { text: "Github", link: "https://github.com/eolinker/postcat" },
       {
         text: "下载",
         ariaLabel: "Download",
-        items: packages
-      }
+        items: packages,
+      },
     ],
     sidebar: {
       "/": [
@@ -44,31 +44,31 @@ export default {
               items: [
                 {
                   text: "导入",
-                  link: "/api/feature-contribution/import"
+                  link: "/api/feature-contribution/import",
                 },
                 {
                   text: "导出",
-                  link: "/api/feature-contribution/export"
+                  link: "/api/feature-contribution/export",
                 },
                 {
                   text: "推送",
-                  link: "/api/feature-contribution/push"
+                  link: "/api/feature-contribution/push",
                 },
                 {
                   text: "多语言",
-                  link: "/api/feature-contribution/i18n"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                  link: "/api/feature-contribution/i18n",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
-    repo: "eolinker/eoapi",
+    repo: "eolinker/postcat",
     logo: "/images/logo.svg",
     editLink: {
-        pattern: 'https://github.com/eolinker/docs.eoapi.io/edit/main/developer/:path',
-        text: '编辑此文档'
+      pattern: "https://github.com/eolinker/docs.postcat.com/edit/main/developer/:path",
+      text: "编辑此文档",
     },
   },
   srcExclude: ["README.md"],

@@ -2,7 +2,7 @@ import { packages } from "../../global.model";
 // import WindiCSS from "vite-plugin-windicss";
 export default {
   lang: "zh-Hans",
-  title: "用户使用文档 - Eoapi",
+  title: "用户使用文档 - Postcat",
   lastUpdated: true,
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -24,8 +24,8 @@ export default {
     },
     nav: [
       { text: "文档", link: "/index", activeMatch: "/docs" },
-      { text: "Live Demo", link: "https://eoapi.io/" },
-      { text: "Github", link: "https://github.com/eolinker/eoapi" },
+      { text: "Live Demo", link: "https://postcat.com/" },
+      { text: "Github", link: "https://github.com/eolinker/postcat" },
       { text: "博客", link: "/release/monthly", activeMatch: "/release" },
       {
         text: "下载",
@@ -44,7 +44,7 @@ export default {
               items: [{ text: "耗时半年，Eoapi 正式发布插件广场", link: "/release/extension-market" }],
             },
 
-            { text: "我们为什么要做 Eoapi", link: "/release/why-eoapi" },
+            { text: "我们为什么要做 Postcat", link: "/release/why-eoapi" },
           ],
         },
       ],
@@ -79,22 +79,18 @@ export default {
               items: [{ text: "离线安装", link: "/docs/local-install-extension" }],
             },
             {
-              text: "团队协作",
-              link: "/docs/collaborate",
-              items: [
-                { text: "云端服务", link: "/docs/storage" },
-                { text: "API 分享", link: "/docs/apiShare" },
-              ],
+              text: "已归档功能",
+              link: "/docs/archive",
             },
             { text: "常见问题", link: "/docs/FAQ" },
           ],
         },
       ],
     },
-    repo: "eolinker/eoapi",
+    repo: "eolinker/postcat",
     logo: "/images/logo.svg",
     editLink: {
-      pattern: "https://github.com/eolinker/docs.eoapi.io/edit/main/user/:path",
+      pattern: "https://github.com/eolinker/docs.postcat.com/edit/main/user/:path",
       text: "编辑此文档",
     },
   },
