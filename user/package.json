@@ -1,10 +1,10 @@
 {
-  "name": "eoapi-user-doc",
+  "name": "postcat-user-doc",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "vitepress dev --port 3100",
+    "start": "vitepress dev --port 3000",
     "dev": "vitepress dev",
     "build": "vitepress build",
     "serve": "vitepress serve"
