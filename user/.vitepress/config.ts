@@ -78,10 +78,6 @@ export default {
               link: "/docs/extensions",
               items: [{ text: "离线安装", link: "/docs/local-install-extension" }],
             },
-            {
-              text: "已归档功能",
-              link: "/docs/archive",
-            },
             { text: "常见问题", link: "/docs/FAQ" },
           ],
         },
