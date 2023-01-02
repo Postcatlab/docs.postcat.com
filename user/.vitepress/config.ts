@@ -26,7 +26,7 @@ export default {
       { text: "文档", link: "/index", activeMatch: "/docs" },
       { text: "Live Demo", link: "https://postcat.com/" },
       { text: "Github", link: "https://github.com/eolinker/postcat" },
-      { text: "博客", link: "/release/monthly", activeMatch: "/release" },
+      // { text: "博客", link: "/release/monthly", activeMatch: "/release" },
       {
         text: "下载",
         ariaLabel: "Download",
