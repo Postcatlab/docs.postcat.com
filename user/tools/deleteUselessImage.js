@@ -6,10 +6,13 @@ const fsReaddir = util.promisify(fs.readdir);
 const fsReadFile = util.promisify(fs.readFile);
 const fsLstat = util.promisify(fs.lstat);
 deleteImg("../assets/images");
-async function searchFilesInDirectoryAsync(dir, filter, ext) {
-  const found = await getFilesInDirectoryAsync(dir, ext);
-
-  for (file of found) {
+async function searchFilesInDirectoryAsync(dirs, filter, ext) {
+  let targetFileArr = [];
+  for (var i = 0; i < dirs.length; i++) {
+    const dir = dirs[i];
+    targetFileArr = [...targetFileArr, ...(await getFilesInDirectoryAsync(dir, ext))];
+  }
+  for (file of targetFileArr) {
     const fileContent = await fsReadFile(file);
 
     // We want full words, so we use full word boundary in regex.
@@ -48,9 +51,8 @@ async function deleteImg(dir) {
   const imageFiles = await fsReaddir(dir).catch((err) => {
     throw new Error(err.message);
   });
-  console.log(imageFiles);
   imageFiles.forEach((imgName) => {
-    searchFilesInDirectoryAsync("../docs", imgName).then((hasFind) => {
+    searchFilesInDirectoryAsync(["../docs", "../release"], imgName).then((hasFind) => {
       if (!hasFind) {
         fs.unlink(`${dir}/${imgName}`, function (error) {
           if (error) {
