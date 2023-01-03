@@ -11,6 +11,9 @@ export default {
     //Client only import script
     if (!import.meta.env.SSR) {
       import("../lib/setDownload.js");
+      if (window.location.hostname.includes("eoapi.io")) {
+        window.location.href = "https://docs.postcat.com";
+      }
     }
   },
   setup() {
