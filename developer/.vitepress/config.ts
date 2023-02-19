@@ -55,6 +55,10 @@ export default {
                   link: "/api/feature-contribution/push",
                 },
                 {
+                  text: "主题",
+                  link: "/api/feature-contribution/theme",
+                },
+                {
                   text: "多语言",
                   link: "/api/feature-contribution/i18n",
                 },
