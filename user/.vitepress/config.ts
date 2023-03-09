@@ -25,7 +25,7 @@ export default {
     nav: [
       { text: "文档", link: "/index", activeMatch: "/docs" },
       { text: "Live Demo", link: "https://postcat.com/" },
-      { text: "Github", link: "https://github.com/eolinker/postcat" },
+      { text: "Github", link: "https://github.com/Postcatlab/postcat" },
       // { text: "博客", link: "/release/monthly", activeMatch: "/release" },
       {
         text: "下载",
@@ -83,7 +83,7 @@ export default {
         },
       ],
     },
-    repo: "eolinker/postcat",
+    repo: "Postcatlab/postcat",
     logo: "/images/logo.svg",
     editLink: {
       pattern: "https://github.com/eolinker/docs.postcat.com/edit/main/user/:path",

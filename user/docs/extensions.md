@@ -21,4 +21,4 @@
 
 可以查看[开发者手册](https://developer.postcat.com/)开发、上架自己的插件。
 
-也可以在 [Issue](https://github.com/eolinker/postcat/issues/137) 下给我们提建议
+也可以在 [Issue](https://github.com/Postcatlab/postcat/issues/137) 下给我们提建议

@@ -4,7 +4,7 @@
 
 ## 示例代码
 
-[postcat to openapi](https://github.com/eolinker/postcat-extensions/tree/main/packages/postcat-export-openapi)
+[postcat to openapi](https://github.com/Postcatlab/postcat-extensions/tree/main/packages/postcat-export-openapi)
 
 ## 配置
 

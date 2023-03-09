@@ -8,19 +8,19 @@
 
 ## 提 Bug/意见反馈
 
-可以到 [Github issue](https://github.com/eolinker/postcat/issues) 创建一个 Issue，我们会及时响应！
+可以到 [Github issue](https://github.com/Postcatlab/postcat/issues) 创建一个 Issue，我们会及时响应！
 
 ## 社区互助
 
 如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
 
-通过 [GitHub Discussions](https://github.com/eolinker/postcat/discussions) 提问时，建议使用 Q&A 标签。
+通过 [GitHub Discussions](https://github.com/Postcatlab/postcat/discussions) 提问时，建议使用 Q&A 标签。
 
 通过 Stack Overflow 提问时，建议加上 Postcat 标签。
 
 <!-- 或者 Segment Fault  -->
 
-1. [GitHub Discussions](https://github.com/eolinker/postcat/discussions)
+1. [GitHub Discussions](https://github.com/Postcatlab/postcat/discussions)
 
 2. <a href="http://stackoverflow.com/questions/tagged/postcat"><img style="vertical-align: middle;" alt="Stack Overflow" src="/images/stackoverflow.svg" width="140"></a>(英文)
 

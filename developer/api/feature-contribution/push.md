@@ -7,7 +7,7 @@
 
 ## 示例代码
 
-一键将 API 推送到其他平台：[postcat push eolink](https://github.com/eolinker/postcat-extensions/tree/main/packages/postcat-push-eolink)
+一键将 API 推送到其他平台：[postcat push eolink](https://github.com/Postcatlab/postcat-extensions/tree/main/packages/postcat-push-eolink)
 
 ## 配置
 
