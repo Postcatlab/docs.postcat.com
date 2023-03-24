@@ -50,11 +50,12 @@ Postcat 应用需要通过入口文件 `package.json` 找到插件，了解插�
 {
   "name": "插件唯一字符串 ID，例如:postcat-import-openapi",
   "version": "三位字符版本号",
-  "main": "Browser 入口文件",
-  "node": "Node 入口文件",
+  "main": "Browser/Node 入口文件",
   "description": "插件描述",
   "homepage": "首页地址",
   "author": "作者名称",
+  //插件类别
+  "categories": ["Data Migration", "Themes", "API Testing", "Other", "API Security"],
   //postcat 拓展专属字段
   "title": "插件标题",
   "logo": "插件 Logo，在线地址/本地地址",
@@ -99,6 +100,8 @@ export const exportOpenAPI = (apiInfo) => {
 
 当我们开发了一个叫 `foo` 的插件后，需要将它映射到本地，并让 Postcat 能够识别它。我们已经帮你做了一些工作，你只需要运行以下命令，即等效于正式安装了插件在本地。
 
+如果是 Typescript 开发的插件，`debug` 前请进行构建。
+
 ```bash
 $ pcex debug foo
 ```
@@ -106,6 +109,9 @@ $ pcex debug foo
 :::warning
 目前部分插件需要重启 Postcat 后才能看到更新，我们正在开发体验良好的热更新功能。
 :::
+
+重启后可以在已安装列表看到插件。
+![](../assets/images/2023-03-24-14-12-10.png)
 
 ## 打包
 

@@ -47,8 +47,6 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
   "version": "1.0.0",
   "description": "Postcat extension for push api data",
   "main": "dist/index.js",
-  "moduleID": "postcat-foo", // 插件ID，可以自定义
-  "moduleName": "postcat-foo", // 插件名称，可以自定义
   "logo": "https://s3.bmp.ovh/imgs/2022/05/18/d8d200e3dc050831.png",
   "scripts": {
     "build": "rollup -c rollup.config.js",
@@ -58,7 +56,7 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
     "rollup": "^2.70.2"
   },
   "features": {
-    "apimanage.sync": {
+    "pushAPI": {
       "action": "sync_to_remote", // 需要与 index.js 中的主函数名保持一致
       "label": "Target", // 显示在 UI 上推送区域的名称
       "description": "", // 插件的简要描述
@@ -70,6 +68,7 @@ export const sync_to_remote = async (data = {}, { url, token }) => {
       "type": "object",
       "title": "Push",
       "properties": {
+        //唯一 ID
         "eolink.remoteServer.url": {
           "type": "string",
           "required": true,
