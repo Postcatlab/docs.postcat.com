@@ -47,6 +47,18 @@ export default {
                   link: "/api/feature-contribution/import",
                 },
                 {
+                  text: "鉴权",
+                  link: "/api/feature-contribution/api-auth",
+                },
+                {
+                  text: "主题",
+                  link: "/api/feature-contribution/theme",
+                },
+                // {
+                //   text: "同步",
+                //   link: "/api/feature-contribution/pull",
+                // },
+                {
                   text: "导出",
                   link: "/api/feature-contribution/export",
                 },
@@ -54,10 +66,7 @@ export default {
                   text: "推送",
                   link: "/api/feature-contribution/push",
                 },
-                {
-                  text: "主题",
-                  link: "/api/feature-contribution/theme",
-                },
+
                 {
                   text: "多语言",
                   link: "/api/feature-contribution/i18n",

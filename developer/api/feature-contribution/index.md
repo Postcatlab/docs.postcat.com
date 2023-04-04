@@ -22,11 +22,14 @@ Feature 代表功能级别的插件，除了[必填的配置项](/api/get-starte
 支持拓展的功能
 名称| features | 描述 |
 | ---- | ---- | ---- |
+|[鉴权](/api/feature-contribution/api-auth.html)|authAPI|API 鉴权|
+|[主题](/api/feature-contribution/theme.html)|theme|自定义主题颜色|
 |[导入](/api/feature-contribution/import.html)| importAIP | 自定义导入 API 数据 |
 |[导出](/api/feature-contribution/export.html)| exportAPI | 自定义导出 API 数据 |
 |[推送](/api/feature-contribution/push.html)| pushAPI | 将 API 数据推送到其他各个平台 |
 |[多语言](/api/feature-contribution/i18n.html)| i18n | 支持不同语言的插件显示 |
-|[vscode postcat dracula](https://github.com/Postcatlab/postcat-extensions/tree/main/packages/vscode-postcat-dracula)|theme|自定义主题颜色|
+
+<!-- |[同步](/api/feature-contribution/pull-api.html)|pullAPI|从同步 API| -->
 
 ## 功能预告
 
@@ -34,10 +37,10 @@ Feature 代表功能级别的插件，除了[必填的配置项](/api/get-starte
 以下插件功能将会在后续支持，敬请期待。
 :::
 
-- API 鉴权插件
+- 数据备份插件
+- AI 插件
 - API 文档生成代码
 - API 信息生成数据
-- 数据备份插件
 - 快捷键
 <!-- - 文档变更推送通知(需要用户系统) -->
 
